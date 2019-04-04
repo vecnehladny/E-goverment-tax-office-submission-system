@@ -199,6 +199,14 @@ public class Controller implements Initializable {
 		
 	}
 	
+	@FXML
+	public void add(ActionEvent event) throws IOException {
+		try {
+			changeScene("addUser.fxml", event);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 	
 	public void changeScene(String s,ActionEvent event) throws IOException {

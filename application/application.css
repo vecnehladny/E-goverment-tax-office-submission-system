@@ -1,7 +1,18 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
+
 #found .button {
 	-fx-background-color:  #99ccff;
 	-fx-text-fill: white;
 	-fx-cursor: hand;
+}
+
+#addform .text-field, #addform .combo-box {
+	-fx-background-color: rgba(0,0,0,0);
+	-fx-border-color:  #99ccff;
+	-fx-border-width: 0 0 2 0;
+}
+
+#addform * {
+	-fx-text-fill: rgb(178,178,178);
 }
