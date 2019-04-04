@@ -9,8 +9,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import main.user;
-
 public class Database implements Serializable {
 	private static ArrayList<user> subjekti = new ArrayList<user>();
 
@@ -91,7 +89,7 @@ public class Database implements Serializable {
 		
 	}
 	
-	public void create() {
+	/*public void create() {
 		fyzickaOsoba a = new fyzickaOsoba("Janko", 30, "Muž", "Budatinska 22", "Bratislava", "97901", "13957971", "7096487980", true);
 		fyzickaOsoba b = new fyzickaOsoba("Jozef", 30, "Muž", "Budatinska 23", "Bratislava", "97901", "88662143", "7116725051", true);
 		fyzickaOsoba c = new fyzickaOsoba("Peter", 30, "Muž", "Budatinska 24", "Bratislava", "97901", "24962304", "8935605926", false);
@@ -135,11 +133,11 @@ public class Database implements Serializable {
 		subjekti.add(s);
 		subjekti.add(t);
 		System.out.println("databaza vytvore");
-	}
+	}*/
 	
 	Database() {
-		create();
+		//create();
 		//save();
-		//load();
+		load();
 	}
 }
