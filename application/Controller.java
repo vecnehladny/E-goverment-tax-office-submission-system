@@ -164,9 +164,8 @@ public class Controller implements Initializable {
 		changeScene("main.fxml", event);
 	}
 	
-	@FXML
+	
 	public void all(ActionEvent event) throws IOException {
-		
 		ArrayList<Button> buttons = new ArrayList<Button>();
 		ArrayList<user> result = Database.getSubjekti();
 		
@@ -197,23 +196,27 @@ public class Controller implements Initializable {
 			
 			vypis.appendText(result.get(innerI).toString()+"\n");
 		}
+		
 	}
-	
 	
 	
 	
 	public void changeScene(String s,ActionEvent event) throws IOException {
+			
 		Parent homepage = FXMLLoader.load(getClass().getResource(s));
 		Scene homeScene = new Scene(homepage);
 		
+		homeScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		stage.hide();
 		stage.setScene(homeScene);
 		stage.show();
+		
+		if(s.equals("main.fxml")) {
+			llogi.setText(View.LOGGED.getMeno());
+		}
 	}
 	
 	public static void profileData(user u) {
-		System.out.println(namei);
 		namei.setText(u.getMeno());
 		yoi.setText(Integer.toString(u.getVek()));
 		genderi.setText(u.getPohlavie());
@@ -227,6 +230,7 @@ public class Controller implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		this.llogi = llog;
+		
 		this.namei = nameprof;
 		this.yoi = yoprof;
 		this.genderi = genderprof;
@@ -235,7 +239,6 @@ public class Controller implements Initializable {
 		this.icoi = icoprof;
 		this.dici = dicprof;
 		this.platcadphi = platcadphprof;
-		
 		
 		
 	}
