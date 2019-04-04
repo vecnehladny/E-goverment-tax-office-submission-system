@@ -1,8 +1,13 @@
 package application;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Database {
+public class Database implements Serializable {
 	private static ArrayList<user> subjekti = new ArrayList<user>();
 
 	public static ArrayList<user> search(String key) {
@@ -28,6 +33,26 @@ public class Database {
 	
 	public static ArrayList<user> getSubjekti() {
 		return subjekti;
+	}
+	
+	public static void save() {
+		try {
+			FileOutputStream fileOut = new FileOutputStream("databaza.ser");
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+			
+			out.writeObject(subjekti);
+			
+			out.close();
+			fileOut.close();
+		}
+		
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void create() {
