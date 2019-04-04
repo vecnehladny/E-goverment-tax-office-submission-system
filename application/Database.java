@@ -1,11 +1,15 @@
 package application;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import main.user;
 
 public class Database implements Serializable {
 	private static ArrayList<user> subjekti = new ArrayList<user>();
@@ -53,6 +57,38 @@ public class Database implements Serializable {
 		catch(IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void load() {
+		subjekti.clear();
+		
+		try{
+			FileInputStream fileIn = new FileInputStream("databaza.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            
+			subjekti = (ArrayList<user>)in.readObject();
+				
+			for(user u : subjekti) {
+				System.out.println("Recovered " + u.getMeno() + " " + u.getICO());
+			}
+			
+			in.close();
+            fileIn.close();
+            
+		}
+		
+		catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } 
+		
+		catch(FileNotFoundException e) {
+            e.printStackTrace();
+        }
+		
+		catch (IOException e) {
+            e.printStackTrace();
+        }
+		
 	}
 	
 	public void create() {
