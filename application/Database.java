@@ -89,6 +89,22 @@ public class Database implements Serializable {
 		
 	}
 	
+	public static void add(user u) {
+		subjekti.add(u);
+		save();
+		load();
+	}
+	
+	public static void remove(String ico) {
+		for(user u : subjekti) {
+			if(u.getICO().equalsIgnoreCase(ico)) {
+				subjekti.remove(u);
+			}
+		}
+		save();
+		load();
+	}
+	
 	/*public void create() {
 		fyzickaOsoba a = new fyzickaOsoba("Janko", 30, "Muž", "Budatinska 22", "Bratislava", "97901", "13957971", "7096487980", true);
 		fyzickaOsoba b = new fyzickaOsoba("Jozef", 30, "Muž", "Budatinska 23", "Bratislava", "97901", "88662143", "7116725051", true);

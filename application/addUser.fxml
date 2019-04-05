@@ -22,7 +22,7 @@
                </font>
             </Button>
             <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" style="-fx-background-color: white;" text="Add" textFill="#99ccff">
+            <Button fx:id="add" mnemonicParsing="false" onAction="#addUser" style="-fx-background-color: white;" text="Add" textFill="#99ccff">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -54,13 +54,13 @@
             <TextField fx:id="menoadd" promptText="Meno" GridPane.columnSpan="2" />
             <TextField fx:id="vekadd" promptText="Vek" GridPane.columnSpan="2" GridPane.rowIndex="1" />
             <ComboBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Pohlavie" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-            <TextField fx:id="adresaadd" promptText="Ulica, číslo" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-            <TextField promptText="PSČ" GridPane.rowIndex="4" />
-            <TextField promptText="Mesto" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <TextField promptText="IČO" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-            <TextField promptText="DIČ" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-            <CheckBox mnemonicParsing="false" text="Platca DPH" GridPane.columnSpan="2" GridPane.rowIndex="7" />
-            <CheckBox mnemonicParsing="false" text="Podnikateľská osoba" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+            <TextField fx:id="adressaadd" promptText="Ulica, číslo" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <TextField fx:id="pscadd" promptText="PSČ" GridPane.rowIndex="4" />
+            <TextField fx:id="mestoadd" promptText="Mesto" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="icoadd" promptText="IČO" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <TextField fx:id="dicadd" promptText="DIČ" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <CheckBox fx:id="platcaadd" mnemonicParsing="false" text="Platca DPH" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+            <CheckBox fx:id="pravnickaadd" mnemonicParsing="false" text="Právnická Osoba" GridPane.columnSpan="2" GridPane.rowIndex="8" />
          </children>
       </GridPane>
    </center>

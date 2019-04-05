@@ -6,11 +6,14 @@ import java.util.*;
 
 import javafx.stage.*;
 import javafx.scene.*;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
@@ -85,6 +88,45 @@ public class Controller implements Initializable {
 	private static Text dici;
 	private static CheckBox platcadphi;
 	
+//----------------------------------------addUser
+	
+	@FXML
+	private TextField menoadd;
+	
+	@FXML
+	private TextField vekadd;
+	
+	@FXML
+	private TextField adressaadd;
+	
+	@FXML
+	private TextField pscadd;
+	
+	@FXML
+	private TextField mestoadd;
+	
+	@FXML
+	private TextField icoadd;
+	
+	@FXML
+	private TextField dicadd;
+	
+	@FXML
+	private CheckBox platcaadd;
+	
+	@FXML
+	private CheckBox pravnickaadd;
+	
+	private static TextField menoaddi;
+	private static TextField vekaddi;
+	private static TextField adressaaddi;
+	private static TextField pscaddi;
+	private static TextField mestoaddi;
+	private static TextField icoaddi;
+	private static TextField dicaddi;
+	private static CheckBox platcaaddi;
+	private static CheckBox pravnickaaddi;
+	static Alert add = new Alert(AlertType.CONFIRMATION);
 	
 	
 //----------------------------------------other
@@ -208,6 +250,38 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	@FXML
+	public void addUser(ActionEvent event) throws IOException {
+		/*System.out.println(menoaddi.getText());
+		System.out.println(Integer.parseInt(vekaddi.getText()));
+		System.out.println(adressaaddi.getText());
+		System.out.println(mestoaddi.getText());
+		System.out.println(pscaddi.getText());
+		System.out.println(icoaddi.getText());
+		System.out.println(dicaddi.getText());
+		System.out.println(platcaaddi.isSelected());*/
+		
+		add.setContentText("Chcete pridať: \"" + menoaddi.getText() + "\" ?");
+		
+		Optional<ButtonType> result = add.showAndWait();
+		
+		if(result.get() == ButtonType.OK) {
+			if(pravnickaaddi.isSelected()) {
+				Database.add(new pravnickaOsoba(menoaddi.getText(),Integer.parseInt(vekaddi.getText()),"muz",adressaaddi.getText(),mestoaddi.getText(),pscaddi.getText(),icoaddi.getText(),dicaddi.getText(),platcaaddi.isSelected()));
+			}
+		
+			else {
+				Database.add(new fyzickaOsoba(menoaddi.getText(),Integer.parseInt(vekaddi.getText()),"muz",adressaaddi.getText(),mestoaddi.getText(),pscaddi.getText(),icoaddi.getText(),dicaddi.getText(),platcaaddi.isSelected()));
+			}
+			
+			changeScene("main.fxml", event);
+		}
+		
+		else {
+			
+		}
+	}
+	
 	
 	public void changeScene(String s,ActionEvent event) throws IOException {
 			
@@ -247,6 +321,16 @@ public class Controller implements Initializable {
 		this.icoi = icoprof;
 		this.dici = dicprof;
 		this.platcadphi = platcadphprof;
+		
+		this.menoaddi = menoadd;
+		this.vekaddi = vekadd;
+		this.adressaaddi = adressaadd;
+		this.pscaddi = pscadd;
+		this.mestoaddi = mestoadd;
+		this.icoaddi = icoadd;
+		this.dicaddi = dicadd;
+		this.platcaaddi = platcaadd;
+		this.pravnickaaddi = pravnickaadd;
 		
 		
 	}
