@@ -16,3 +16,100 @@
 #addform * {
 	-fx-text-fill: rgb(178,178,178);
 }
+
+#main .text-field {
+	-fx-background-color: white;
+}
+
+#main #part  {
+	-fx-background-color:  rgb(232,243,210);
+	-fx-border-color: black;
+	-fx-border-width: 1 1 1 1;
+	
+	-fx-padding: 10;
+    -fx-border-insets: 5;
+    -fx-background-insets: 5;
+    
+    -fx-spacing: 10;
+}
+
+#main #partNP  {
+	-fx-background-color:  rgb(232,243,210);
+	-fx-border-color: black;
+	-fx-border-width: 1 1 1 1;
+	  -fx-border-insets: 5;
+    -fx-background-insets: 5;
+    
+    -fx-spacing: 10;
+}
+
+#main #partNPNS {
+	-fx-background-color:  rgb(232,243,210);
+	-fx-border-color: black;
+	-fx-border-width: 1 1 1 1;
+	  -fx-border-insets: 5;
+    -fx-background-insets: 5;
+}
+
+#main #partNM  {
+	-fx-background-color:  rgb(232,243,210);
+	-fx-border-color: black;
+	-fx-border-width: 1 1 1 1;
+	
+	-fx-padding: 0;
+    -fx-border-insets: 5;
+    -fx-background-insets: 5;
+    
+    -fx-spacing: 10;
+}
+
+#main #partC {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 0 0;
+	
+	-fx-padding: 10;
+	-fx-spacing: 10;
+    
+}
+
+#main #partCS {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 0 0;
+	
+	-fx-padding: 10;
+	-fx-spacing: 10;
+    
+}
+
+#main #partCNP {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 0 0;
+    -fx-spacing: 10;
+}
+
+#main #partCLB {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 0 1;
+	
+	-fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+#main #partCTB {
+	-fx-border-color: black;
+	-fx-border-width: 1 0 1 0;
+	-fx-padding: 10;
+    -fx-border-insets: 5;
+    -fx-background-insets: 5;
+    -fx-spacing: 10;
+}
+
+#main #partCTBNP {
+	-fx-border-color: black;
+	-fx-border-width: 1 0 1 0;
+    
+}
+
+#main #spacing {
+	-fx-spacing: 10;
+}
