@@ -1,5 +1,7 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-
+/* partCHnP = spacing 
+ * partHfirst = spacing
+ * */
 
 #found .button {
 	-fx-background-color:  #99ccff;
@@ -17,11 +19,16 @@
 	-fx-text-fill: rgb(178,178,178);
 }
 
-#main .text-field {
+#strana {
+	-fx-padding: 0 0 100 0;
+	-fx-spacing: 10;
+}
+
+#strana .text-field {
 	-fx-background-color: white;
 }
 
-#main #part  {
+#strana #part  {
 	-fx-background-color:  rgb(232,243,210);
 	-fx-border-color: black;
 	-fx-border-width: 1 1 1 1;
@@ -33,7 +40,7 @@
     -fx-spacing: 10;
 }
 
-#main #partO, #main #part0 * {
+#strana #partO, #strana #partO * {
 	-fx-background-color:  rgb(232,243,210);
 	-fx-border-color: black;
 	-fx-border-width: 1 1 1 1;
@@ -48,14 +55,14 @@
     -fx-font-size: 15;
 }
 
-#main #partNP {
+#strana #partNP {
 	-fx-background-color:  rgb(232,243,210);
 	-fx-border-color: black;
 	-fx-border-width: 1 1 1 1;
     
 }
 
-#main #partHfirst {
+#strana #partHfirst {
 	-fx-padding: 10;
     -fx-border-insets: 0;
     -fx-background-insets: 0;
@@ -63,7 +70,13 @@
     -fx-spacing: 10;
 }
 
-#main #partH {
+#strana #partHfirstnS {
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+
+#strana #partH {
 	-fx-border-color: black;
 	-fx-border-width: 0 0 0 1;
 	
@@ -74,7 +87,18 @@
     -fx-spacing: 10;
 }
 
-#main #partCH {
+#strana #partHnP {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 0 1;
+    -fx-spacing: 10;
+}
+
+#strana #partHnPnS {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 0 1;
+}
+
+#strana #partCH {
 	-fx-padding: 10;
     -fx-border-insets: 0;
     -fx-background-insets: 0;
@@ -82,7 +106,58 @@
     -fx-spacing: 10;
 }
 
-#main #predelfirst {
+#strana #partCHbB {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 1 0;
+	
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-spacing: 10;
+}
+
+#strana #partCHfirst {
+	-fx-border-color: black;
+	-fx-border-width: 1 0 1 0;
+	
+	-fx-padding: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-spacing: 10;
+}
+
+#strana #partCHfirstnS {
+	-fx-border-color: black;
+	-fx-border-width: 1 0 1 0;
+	
+	-fx-padding: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+
+#strana #partCHmiddle {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 1 0;
+	
+	-fx-padding: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-spacing: 10;
+}
+
+#strana #partCHmiddlenS {
+	-fx-border-color: black;
+	-fx-border-width: 0 0 1 0;
+	
+	-fx-padding: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+}
+
+#strana #predelfirst {
 	-fx-padding: 10;
     -fx-border-insets: 0;
     -fx-background-insets: 0;
@@ -91,7 +166,7 @@
 	-fx-border-width: 1 0 0 0;
 }
 
-#main #predel {
+#strana #predel {
 	-fx-padding: 10;
     -fx-border-insets: 0;
     -fx-background-insets: 0;
@@ -100,10 +175,35 @@
 	-fx-border-width: 1 0 1 0;
 }
 
-#main #bold {
+#strana #predellast {
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-border-color: black;
+	-fx-border-width: 0 0 1 0;
+	
+	-fx-spacing: 10;
+}
+
+#strana #boldP {
+	-fx-font-weight: bold;
+	-fx-padding: 10;
+}
+
+#strana #bold {
 	-fx-font-weight: bold;
 }
 
-#main #spacing {
+#strana #padding {
+	-fx-padding: 10;
+}
+
+#strana #paddingspacing {
+	-fx-padding: 10;
+	-fx-spacing: 10;
+}
+
+#strana #spacing {
 	-fx-spacing: 10;
 }
