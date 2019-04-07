@@ -1093,7 +1093,7 @@
                                     </HBox>
                                  </children>
                               </HBox>
-                              <HBox id="partCHmiddlenS">
+                              <HBox id="spacing">
                                  <children>
                                     <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
                                        <children>
@@ -1103,6 +1103,299 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[56]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox id="strana" alignment="CENTER">
+                     <children>
+                        <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
+                              <TextField />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nárok na daňový bonus (úhrnná suma daňového bonusu na všetky vyživované deti) podľa § 33 zákona" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[57]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť) znížená o daňový bonus podľa § 33 zákona (r. 56 - r. 57)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[58]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu podľa § 33 zákona priznaného a vyplateného zamestnávateľom" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[59]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel r. 57 - r. 59 &gt; 0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[60]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu podľa § 33 zákona na poukázanie správcom dane 14) r. 60 - r. 56 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[61]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zamestnávateľom nesprávne vyplatený daňový bonus podľa § 33 zákona   r. 59 - r. 57 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[62]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nárok na daňový bonus na zaplatené úroky podľa § 33a zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[63]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť) znížená o daňový bonus podľa§ 33 zákona a o daňový bonus na zaplatené úroky podľa § 33a zákona (r. 58 - r. 63)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[64]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu na zaplatené úroky podľa § 33a zákona priznaného a vyplateného zamestnávateľom" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[65]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel r. 63 - r. 65 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[66]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu na zaplatené úroky podľa § 33a zákona na poukázanie správcom dane 18) r. 66 - r. 58 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[67]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn preddavkov na daň zaplatených podľa § 34 ods. 6 a 7 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[68]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn preddavkov na daň zaplatených podľa § 34 zákona okrem preddavkov zaplatených podľa § 34 ods. 6 a 7 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[69]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn preddavkov na daň zrazených podľa § 35 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[70]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň na úhradu vrátane zamestnávateľom nesprávne vyplatených daňových bonusov alebo zamestnaneckej prémie r. 56 - r. 57 + r. 59 + r. 61 - r. 63 + r. 65 + r. 67 - r. 68 - r. 69 - r. 70 + r. 47 (+)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[71]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daňový preplatok znížený o zamestnávateľom nesprávne vyplatené daňové bonusy alebo zamestnaneckú prémiu+ r. 59 + r. 61 - r. 63 + r. 65 + r. 67 - r. 68 - r. 69 - r. 70 + r. 47 (-)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[72]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VII. ODDIEL - ROZDIELY Z DODATOČNÉHO DAŇOVÉHO PRIZNANIA - v eurách" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť) z r. 56 daňového priznania alebo r. 105 daňového priznania fyzickej osoby typ B  alebo r. 06 ročného zúčtovania preddavkov na daň z príjmov zo závislej činnosti" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[73]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zvýšenie (+) alebo zníženie (-) dane (r. 56 - r. 73)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[74]" />
                                           <TextField />
                                        </children>
                                     </HBox>
