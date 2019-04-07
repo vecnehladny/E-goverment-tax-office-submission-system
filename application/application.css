@@ -106,6 +106,13 @@
     -fx-spacing: 10;
 }
 
+#strana #partCHtB {
+	-fx-border-color: black;
+	-fx-border-width: 1 0 0 0;
+	
+	-fx-spacing: 10;
+}
+
 #strana #partCHbB {
 	-fx-border-color: black;
 	-fx-border-width: 0 0 1 0;
