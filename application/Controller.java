@@ -16,6 +16,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Text;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -351,7 +353,6 @@ public class Controller implements Initializable {
 		this.dicaddi = dicadd;
 		this.platcaaddi = platcaadd;
 		this.pravnickaaddi = pravnickaadd;
-		
 		
 	}
 }

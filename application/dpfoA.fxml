@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1754.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10000.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <ScrollPane hbarPolicy="NEVER" BorderPane.alignment="CENTER">
          <padding>
@@ -79,13 +79,13 @@
                               <VBox id="partHfirst" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[01] - DIČ (ak nie je pridelené, uvádza sa rodné číslo)" />
-                                    <TextField />
+                                    <TextField fx:id="dic01" />
                                     <HBox id="spacing">
                                        <children>
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[02] - Dátum narodenia" />
-                                                <TextField />
+                                                <TextField fx:id="datum02" />
                                              </children>
                                           </VBox>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Riadok 02 sa vypĺňa, len ak ide o daňovníka, ktorý nemá pridelené DIČ ani &quot;rodné číslo&quot;" wrappingWidth="160.0" />
@@ -107,7 +107,7 @@
                                     <HBox id="spacing" alignment="BASELINE_LEFT">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Za rok" />
-                                          <TextField text="20" />
+                                          <TextField fx:id="zarok" text="20" />
                                        </children>
                                     </HBox>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum zistenia skutočnosti na &quot;podanie&quot; dodatočného daňového priznania" textAlignment="CENTER" wrappingWidth="260.0" />
@@ -128,19 +128,19 @@
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[03] - Priezvisko" />
-                                          <TextField />
+                                          <TextField fx:id="priezvisko03" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[04] - Meno" />
-                                          <TextField />
+                                          <TextField fx:id="meno04" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[05] - Titul" />
-                                          <TextField />
+                                          <TextField fx:id="titul05" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -158,13 +158,13 @@
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[06] - Ulica" />
-                                                <TextField />
+                                                <TextField fx:id="ulica06" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[07] - Súpisné / orientačné číslo" />
-                                                <TextField />
+                                                <TextField fx:id="cislo07" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -174,19 +174,19 @@
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[08] - PSČ" />
-                                                <TextField />
+                                                <TextField fx:id="psc08" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[09] - Obec" />
-                                                <TextField />
+                                                <TextField fx:id="obec09" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[10] - Štát" />
-                                                <TextField />
+                                                <TextField fx:id="stat10" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -211,13 +211,13 @@
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[12] - Ulica" />
-                                                <TextField />
+                                                <TextField fx:id="ulica12" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[13] - Súpisné / orientačné číslo" />
-                                                <TextField />
+                                                <TextField fx:id="cislo13" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -227,13 +227,13 @@
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[14] - PSČ" />
-                                                <TextField />
+                                                <TextField fx:id="psc14" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[15] - Obec" />
-                                                <TextField />
+                                                <TextField fx:id="obec15" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -254,19 +254,19 @@
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[16] - Priezvisko" />
-                                          <TextField />
+                                          <TextField fx:id="priezvisko16" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[17] - Meno" />
-                                          <TextField />
+                                          <TextField fx:id="meno17" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[18] - Titul" />
-                                          <TextField />
+                                          <TextField fx:id="titul18" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -276,19 +276,19 @@
                                     <VBox id="spacing">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[19] - Rodné číslo" />
-                                          <TextField />
+                                          <TextField fx:id="rodnecislo19" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[20] - Ulica" />
-                                          <TextField />
+                                          <TextField fx:id="ulica20" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[21] - Súpisné / orientačné číslo" />
-                                          <TextField />
+                                          <TextField fx:id="cislo21" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -298,19 +298,19 @@
                                     <VBox id="spacing">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[22] - PSČ" />
-                                          <TextField />
+                                          <TextField fx:id="psc22" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[23] - Obec" />
-                                          <TextField />
+                                          <TextField fx:id="obec23" />
                                        </children>
                                     </VBox>
                                     <VBox id="spacing">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[24] - Štát" />
-                                          <TextField />
+                                          <TextField fx:id="stat24" />
                                        </children>
                                     </VBox>
                                  </children>
@@ -322,13 +322,13 @@
                               <VBox id="partCH">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[25] - Telefónne číslo" />
-                                    <TextField />
+                                    <TextField fx:id="telefon25" />
                                  </children>
                               </VBox>
                               <VBox id="partCH" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[26] - Emailová adresa" />
-                                    <TextField />
+                                    <TextField fx:id="email26" />
                                  </children>
                               </VBox>
                            </children>
@@ -361,7 +361,7 @@
                         <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
-                              <TextField />
+                              <TextField fx:id="rodnecislo2" />
                            </children>
                         </HBox>
                         <HBox id="partO">
@@ -386,7 +386,7 @@
                                     <HBox id="partH" alignment="CENTER">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[27]" />
-                                          <CheckBox mnemonicParsing="false" text="áno" />
+                                          <CheckBox fx:id="ano27" mnemonicParsing="false" text="áno" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -401,7 +401,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[28]" />
-                                          <TextField />
+                                          <TextField fx:id="dochodok28" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -424,7 +424,7 @@
                                                 </HBox>
                                                 <HBox id="partCH">
                                                    <children>
-                                                      <TextField HBox.hgrow="ALWAYS" />
+                                                      <TextField fx:id="menopriezvisko29" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
@@ -442,7 +442,7 @@
                                                 </HBox>
                                                 <HBox id="partCH">
                                                    <children>
-                                                      <TextField />
+                                                      <TextField fx:id="rodnecislo291" />
                                                    </children>
                                                 </HBox>
                                              </children>
@@ -456,19 +456,19 @@
                                     <HBox id="partHfirst" alignment="CENTER" maxWidth="-Infinity" prefWidth="300.0" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[30]" />
-                                          <CheckBox mnemonicParsing="false" text="uplatňujem nezdaniteľnú časť základu dane na manželku (manžela) podľa § 11 ods. 3 zákona" wrapText="true" />
+                                          <CheckBox fx:id="uplatnenienezdanitelenj30" mnemonicParsing="false" text="uplatňujem nezdaniteľnú časť základu dane na manželku (manžela) podľa § 11 ods. 3 zákona" wrapText="true" />
                                        </children>
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vlastné príjmy (v euvrách)" />
-                                          <TextField />
+                                          <TextField fx:id="vlastnyprijem311" />
                                        </children>
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Počet mesiacov" />
-                                          <TextField />
+                                          <TextField fx:id="mesiace312" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -509,22 +509,22 @@
                                           </HBox>
                                           <HBox id="partCHfirst" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="menopriezvisko321" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="menopriezvisko322" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="menopriezvisko323" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="menopriezvisko324" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -547,40 +547,40 @@
                                           </HBox>
                                           <HBox id="partCHfirstnS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" />
+                                                <TextField fx:id="rodnecislo321" maxHeight="-Infinity" prefHeight="40.0" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <CheckBox mnemonicParsing="false" />
+                                                      <CheckBox fx:id="kupele321" mnemonicParsing="false" />
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" />
+                                                <TextField fx:id="rodnecislo322" maxHeight="-Infinity" prefHeight="40.0" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <CheckBox mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                                                      <CheckBox fx:id="kupele322" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" />
+                                                <TextField fx:id="rodnecislo323" maxHeight="-Infinity" prefHeight="40.0" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <CheckBox mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                                                      <CheckBox fx:id="kupele323" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <TextField maxHeight="-Infinity" prefHeight="40.0" />
+                                                <TextField fx:id="rodnecislo324" maxHeight="-Infinity" prefHeight="40.0" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <CheckBox mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                                                      <CheckBox fx:id="kupele324" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
@@ -600,40 +600,40 @@
                                           </HBox>
                                           <HBox id="partCHfirst" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="1-12" />
+                                                <CheckBox fx:id="vsetky321" mnemonicParsing="false" text="1-12" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <Slider blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                      <Slider fx:id="mesiacov321" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddle" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="1-12" />
+                                                <CheckBox fx:id="vsetky322" mnemonicParsing="false" text="1-12" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <Slider blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                      <Slider fx:id="mesiacov322" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddle" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="1-12" />
+                                                <CheckBox fx:id="vsetky323" mnemonicParsing="false" text="1-12" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <Slider blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                      <Slider fx:id="mesiacov323" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddle" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="1-12" />
+                                                <CheckBox fx:id="vsetky324" mnemonicParsing="false" text="1-12" />
                                                 <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
                                                    <children>
-                                                      <Slider blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                      <Slider fx:id="mesiacov324" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
                                                    </children>
                                                 </HBox>
                                              </children>
@@ -645,14 +645,14 @@
                               <HBox id="predellast">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[33]" />
-                                    <CheckBox mnemonicParsing="false" text="Údaje o ďalších vyživovaných deťoch uvádzam v IX. oddiele v členení podľa r. 32" />
+                                    <CheckBox fx:id="dalsiedeti33" mnemonicParsing="false" text="Údaje o ďalších vyživovaných deťoch uvádzam v IX. oddiele v členení podľa r. 32" />
                                  </children>
                               </HBox>
                               <HBox id="partCH">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[34]" />
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preukázateľne zaplatené úhrady na kúpelnú starostlivosť za vyživované dieťa (deti) v úhrne najviac do výšky 50 eur za rok za každé z týchto detí" wrappingWidth="500.0" />
-                                    <TextField />
+                                    <TextField fx:id="zakupele34" />
                                  </children>
                               </HBox>
                            </children>
@@ -669,19 +669,19 @@
                                     <HBox id="partHfirst" alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[35]" />
-                                          <CheckBox maxWidth="-Infinity" mnemonicParsing="false" prefWidth="300.0" text="uplatňujem daňový bonus na zaplatené úroky podľa § 33a zákona" wrapText="true" HBox.hgrow="ALWAYS" />
+                                          <CheckBox fx:id="danovybonus35" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="300.0" text="uplatňujem daňový bonus na zaplatené úroky podľa § 33a zákona" wrapText="true" HBox.hgrow="ALWAYS" />
                                        </children>
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zaplatené úroky za zdaňovacie obdobie (v eurách)" wrappingWidth="200.0" />
-                                          <TextField />
+                                          <TextField fx:id="uroky351" />
                                        </children>
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Počet mesiacov" wrappingWidth="60.0" HBox.hgrow="ALWAYS" />
-                                          <TextField />
+                                          <TextField fx:id="mesiacov352" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -705,7 +705,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[36]" />
-                                          <TextField />
+                                          <TextField fx:id="t36" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -720,7 +720,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[36a]" />
-                                          <TextField />
+                                          <TextField fx:id="t361" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -734,7 +734,7 @@
                         <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
-                              <TextField />
+                              <TextField fx:id="rodnecislo3" />
                            </children>
                         </HBox>
                         <VBox id="partNP">
@@ -749,7 +749,7 @@
                                     <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[37]" />
-                                          <TextField />
+                                          <TextField fx:id="t37" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -764,7 +764,7 @@
                                     <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[37a]" />
-                                          <TextField />
+                                          <TextField fx:id="t371" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -779,7 +779,7 @@
                                     <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[37b]" />
-                                          <TextField />
+                                          <TextField fx:id="t372" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -794,7 +794,7 @@
                                     <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[38]" />
-                                          <TextField />
+                                          <TextField fx:id="t38" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -818,7 +818,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[39]" />
-                                          <TextField />
+                                          <TextField fx:id="t39" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -833,7 +833,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[40]" />
-                                          <TextField />
+                                          <TextField fx:id="t40" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -848,7 +848,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[41]" />
-                                          <TextField />
+                                          <TextField fx:id="t41" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -862,8 +862,8 @@
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[39]" />
-                                          <TextField />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[42]" />
+                                          <TextField fx:id="t42" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -878,7 +878,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[42a]" />
-                                          <TextField />
+                                          <TextField fx:id="t421" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -893,7 +893,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[42b]" />
-                                          <TextField />
+                                          <TextField fx:id="t422" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -908,7 +908,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[43]" />
-                                          <TextField />
+                                          <TextField fx:id="t43" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -923,7 +923,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[44]" />
-                                          <TextField />
+                                          <TextField fx:id="t44" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -938,7 +938,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[45]" />
-                                          <TextField />
+                                          <TextField fx:id="t45" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -953,7 +953,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[46]" />
-                                          <TextField />
+                                          <TextField fx:id="t46" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -968,7 +968,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[47]" />
-                                          <TextField />
+                                          <TextField fx:id="t47" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -983,7 +983,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[48]" />
-                                          <TextField />
+                                          <TextField fx:id="t48" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -998,7 +998,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[49]" />
-                                          <TextField />
+                                          <TextField fx:id="t49" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1013,7 +1013,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[50]" />
-                                          <TextField />
+                                          <TextField fx:id="t50" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1028,7 +1028,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[51]" />
-                                          <TextField />
+                                          <TextField fx:id="t51" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1042,7 +1042,7 @@
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[52]" />
+                                          <Text fx:id="t52" strokeType="OUTSIDE" strokeWidth="0.0" text="[52]" />
                                           <TextField />
                                        </children>
                                     </HBox>
@@ -1058,7 +1058,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[53]" />
-                                          <TextField />
+                                          <TextField fx:id="t53" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1073,7 +1073,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[54]" />
-                                          <TextField />
+                                          <TextField fx:id="t54" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1088,7 +1088,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[55]" />
-                                          <TextField />
+                                          <TextField fx:id="t55" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1103,7 +1103,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[56]" />
-                                          <TextField />
+                                          <TextField fx:id="t56" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1117,7 +1117,7 @@
                         <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
-                              <TextField />
+                              <TextField fx:id="rodnecislo4" />
                            </children>
                         </HBox>
                         <VBox id="partNP">
@@ -1132,7 +1132,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[57]" />
-                                          <TextField />
+                                          <TextField fx:id="t57" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1147,7 +1147,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[58]" />
-                                          <TextField />
+                                          <TextField fx:id="t58" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1162,7 +1162,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[59]" />
-                                          <TextField />
+                                          <TextField fx:id="t59" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1177,7 +1177,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[60]" />
-                                          <TextField />
+                                          <TextField fx:id="t60" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1192,7 +1192,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[61]" />
-                                          <TextField />
+                                          <TextField fx:id="t61" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1207,7 +1207,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[62]" />
-                                          <TextField />
+                                          <TextField fx:id="t62" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1222,7 +1222,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[63]" />
-                                          <TextField />
+                                          <TextField fx:id="t63" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1237,7 +1237,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[64]" />
-                                          <TextField />
+                                          <TextField fx:id="t64" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1252,7 +1252,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[65]" />
-                                          <TextField />
+                                          <TextField fx:id="t65" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1266,7 +1266,7 @@
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[66]" />
+                                          <Text fx:id="t66" strokeType="OUTSIDE" strokeWidth="0.0" text="[66]" />
                                           <TextField />
                                        </children>
                                     </HBox>
@@ -1282,7 +1282,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[67]" />
-                                          <TextField />
+                                          <TextField fx:id="t67" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1297,7 +1297,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[68]" />
-                                          <TextField />
+                                          <TextField fx:id="t68" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1312,7 +1312,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[69]" />
-                                          <TextField />
+                                          <TextField fx:id="t69" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1327,7 +1327,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[70]" />
-                                          <TextField />
+                                          <TextField fx:id="t70" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1342,7 +1342,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[71]" />
-                                          <TextField />
+                                          <TextField fx:id="t71" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1357,7 +1357,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[72]" />
-                                          <TextField />
+                                          <TextField fx:id="t72" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1381,7 +1381,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[73]" />
-                                          <TextField />
+                                          <TextField fx:id="t73" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1396,7 +1396,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[74]" />
-                                          <TextField />
+                                          <TextField fx:id="t74" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1410,7 +1410,7 @@
                         <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
-                              <TextField />
+                              <TextField fx:id="rodnecislo5" />
                            </children>
                         </HBox>
                         <VBox id="partNP">
@@ -1425,7 +1425,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[75]" />
-                                          <TextField />
+                                          <TextField fx:id="t75" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1440,7 +1440,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[76]" />
-                                          <TextField />
+                                          <TextField fx:id="t76" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1455,7 +1455,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[77]" />
-                                          <TextField />
+                                          <TextField fx:id="t77" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1470,7 +1470,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[78]" />
-                                          <TextField />
+                                          <TextField fx:id="t78" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1485,7 +1485,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[79]" />
-                                          <TextField />
+                                          <TextField fx:id="t79" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1500,7 +1500,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[80]" />
-                                          <TextField />
+                                          <TextField fx:id="t80" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1515,7 +1515,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[81]" />
-                                          <TextField />
+                                          <TextField fx:id="t81" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1530,7 +1530,7 @@
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[82]" />
-                                          <TextField />
+                                          <TextField fx:id="t82" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1550,7 +1550,7 @@
                                        <children>
                                           <HBox id="partCHbB" maxWidth="-Infinity" prefWidth="220.0">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="neuplatňujem postup podľa § 50 zákona" wrapText="true" HBox.hgrow="ALWAYS" />
+                                                <CheckBox fx:id="neuplatnujem821" mnemonicParsing="false" text="neuplatňujem postup podľa § 50 zákona" wrapText="true" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCH" maxWidth="-Infinity" prefWidth="200.0">
@@ -1564,20 +1564,20 @@
                                        <children>
                                           <HBox id="partCHbB">
                                              <children>
-                                                <CheckBox mnemonicParsing="false" text="spĺňam podmienky na poukázanie 3 % z dane" />
+                                                <CheckBox fx:id="splnam822" mnemonicParsing="false" text="spĺňam podmienky na poukázanie 3 % z dane" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCH" alignment="CENTER" VBox.vgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[83]" />
-                                                <TextField />
+                                                <TextField fx:id="t83" />
                                              </children>
                                           </HBox>
                                        </children>
                                     </VBox>
                                     <VBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
-                                          <TextField maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                          <TextField fx:id="podpis831" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
                                           <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="podpis daňovníka (zástupcu)" />
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="podpisuje sa len pri uplatňovaní postupu podľa § 50 zákona" />
                                        </children>
@@ -1596,13 +1596,13 @@
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IČO" />
-                                                <TextField />
+                                                <TextField fx:id="ico841" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Právna forma" />
-                                                <TextField />
+                                                <TextField fx:id="pravnaforma842" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -1612,8 +1612,8 @@
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Obchodné meno (názov)" />
-                                                <TextField />
-                                                <TextField />
+                                                <TextField fx:id="nazov843" />
+                                                <TextField fx:id="nazov844" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -1628,13 +1628,13 @@
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica" />
-                                                <TextField />
+                                                <TextField fx:id="ulicas" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Súpisné / orientačné číslo" />
-                                                <TextField />
+                                                <TextField fx:id="cislos" />
                                              </children>
                                           </VBox>
                                        </children>
@@ -1644,20 +1644,20 @@
                                           <VBox id="spacing">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PSČ" />
-                                                <TextField />
+                                                <TextField fx:id="pscs" />
                                              </children>
                                           </VBox>
                                           <VBox id="spacing" HBox.hgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Obec" />
-                                                <TextField />
+                                                <TextField fx:id="obecs" />
                                              </children>
                                           </VBox>
                                        </children>
                                     </HBox>
                                     <HBox id="predel">
                                        <children>
-                                          <CheckBox mnemonicParsing="false" text="súhlasím so zaslaním údajov (meno, priezvisko a trvalý pobyt) mnou určenému prijímateľovi podielu zaplatenej dane uvedenému v r. 84 podľa § 50 ods. 8 zákona" />
+                                          <CheckBox fx:id="zaslanieudajov841" mnemonicParsing="false" text="súhlasím so zaslaním údajov (meno, priezvisko a trvalý pobyt) mnou určenému prijímateľovi podielu zaplatenej dane uvedenému v r. 84 podľa § 50 ods. 8 zákona" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -1671,7 +1671,7 @@
                         <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
-                              <TextField />
+                              <TextField fx:id="rodnecislo6" />
                            </children>
                         </HBox>
                         <HBox id="partO">
@@ -1683,7 +1683,7 @@
                            <children>
                               <HBox id="padding">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Uvádzam osobitné záznamy" />
+                                    <CheckBox fx:id="osobitnezaz842" mnemonicParsing="false" text="Uvádzam osobitné záznamy" />
                                  </children>
                               </HBox>
                               <HBox id="predel">
@@ -1702,17 +1702,17 @@
                                           </HBox>
                                           <HBox id="partCHmiddle">
                                              <children>
-                                                <TextField />
+                                                <TextField fx:id="kodstatu1" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddle">
                                              <children>
-                                                <TextField />
+                                                <TextField fx:id="kodstatu2" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenP">
                                              <children>
-                                                <TextField />
+                                                <TextField fx:id="kodstatu3" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -1726,17 +1726,17 @@
                                           </HBox>
                                           <HBox id="partCHmiddle">
                                              <children>
-                                                <TextField HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="prijmy1" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddle">
                                              <children>
-                                                <TextField HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="prijmy2" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenP">
                                              <children>
-                                                <TextField HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="prijmy3" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -1750,17 +1750,17 @@
                                           </HBox>
                                           <HBox id="partCHmiddle">
                                              <children>
-                                                <TextField HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="vydavky1" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddle">
                                              <children>
-                                                <TextField HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="vydavky2" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                           <HBox id="partCHmiddlenP">
                                              <children>
-                                                <TextField HBox.hgrow="ALWAYS" />
+                                                <TextField fx:id="vydavky3" HBox.hgrow="ALWAYS" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -1785,7 +1785,7 @@
                               <VBox id="partCHbB">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[86] - Štát daňovej rezidencie" />
-                                    <TextField />
+                                    <TextField fx:id="t86" />
                                  </children>
                               </VBox>
                               <HBox>
@@ -1814,7 +1814,7 @@
                                           <HBox id="spacing" alignment="CENTER_LEFT">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[87] - počet príloh" />
-                                                <TextField />
+                                                <TextField fx:id="t87" />
                                              </children>
                                           </HBox>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Uvádza sa počet všetkých príloh, ktoré sú súčasťou daňového priznania" wrappingWidth="300.0" />
@@ -1826,7 +1826,7 @@
                                           <HBox id="spacing" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
                                              <children>
                                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum" />
-                                                <TextField />
+                                                <TextField fx:id="datum871" />
                                              </children>
                                           </HBox>
                                        </children>
@@ -1835,7 +1835,7 @@
                               </VBox>
                               <VBox id="partCH" alignment="CENTER" HBox.hgrow="ALWAYS">
                                  <children>
-                                    <TextArea prefHeight="100.0" prefWidth="200.0" />
+                                    <TextArea fx:id="podpis872" prefHeight="100.0" prefWidth="200.0" />
                                     <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="podpis daňovníka (zástupcu)" />
                                  </children>
                               </VBox>
@@ -1850,23 +1850,23 @@
                            <children>
                               <VBox id="partCH" maxWidth="-Infinity" prefWidth="900.0">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="Žiadam o vyplatenie daňového bonusu alebo rozdielu daňového bonusu podľa § 33 zákona (r. 61 alebo rozdiel z r. 78, ak je kladný)" wrapText="true" />
-                                    <CheckBox mnemonicParsing="false" text="Žiadam o vyplatenie zamestnaneckej prémie podľa § 32a zákona (z r. 46 alebo rozdiel z r. 80, ak je kladný)" wrapText="true" />
-                                    <CheckBox mnemonicParsing="false" text="Žiadam o vyplatenie daňového bonusu na zaplatené úroky alebo rozdielu daňového bonusu na zaplatené úroky podľa § 33a zákona (r. 67 alebo rozdiel z r. 82, ak je kladný)" wrapText="true" />
-                                    <CheckBox mnemonicParsing="false" text="Žiadam o vrátenie daňového preplatku podľa § 79 zákona č. 563/2009 Z. z. o správe daní (daňový poriadok) a o zmene a doplnení niektorých zákonov v znení neskorších predpisov (z r. 72 alebo rozdiel z r. 76, ak je záporný" wrapText="true" />
+                                    <CheckBox fx:id="c873" mnemonicParsing="false" text="Žiadam o vyplatenie daňového bonusu alebo rozdielu daňového bonusu podľa § 33 zákona (r. 61 alebo rozdiel z r. 78, ak je kladný)" wrapText="true" />
+                                    <CheckBox fx:id="c874" mnemonicParsing="false" text="Žiadam o vyplatenie zamestnaneckej prémie podľa § 32a zákona (z r. 46 alebo rozdiel z r. 80, ak je kladný)" wrapText="true" />
+                                    <CheckBox fx:id="c875" mnemonicParsing="false" text="Žiadam o vyplatenie daňového bonusu na zaplatené úroky alebo rozdielu daňového bonusu na zaplatené úroky podľa § 33a zákona (r. 67 alebo rozdiel z r. 82, ak je kladný)" wrapText="true" />
+                                    <CheckBox fx:id="c876" mnemonicParsing="false" text="Žiadam o vrátenie daňového preplatku podľa § 79 zákona č. 563/2009 Z. z. o správe daní (daňový poriadok) a o zmene a doplnení niektorých zákonov v znení neskorších predpisov (z r. 72 alebo rozdiel z r. 76, ak je záporný" wrapText="true" />
                                  </children>
                               </VBox>
                               <HBox id="partCH" alignment="CENTER">
                                  <children>
-                                    <CheckBox mnemonicParsing="false" text="poštovou poukážkou" />
-                                    <CheckBox mnemonicParsing="false" text="na účet" />
-                                    <CheckBox mnemonicParsing="false" text="na účet v zahraničí, ktorého nie som majiteľom" />
+                                    <CheckBox fx:id="posta881" mnemonicParsing="false" text="poštovou poukážkou" />
+                                    <CheckBox fx:id="ucet882" mnemonicParsing="false" text="na účet" />
+                                    <CheckBox fx:id="zahranicie883" mnemonicParsing="false" text="na účet v zahraničí, ktorého nie som majiteľom" />
                                  </children>
                               </HBox>
                               <HBox id="partCH" alignment="CENTER_LEFT">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IBAN" />
-                                    <TextField HBox.hgrow="ALWAYS" />
+                                    <TextField fx:id="iban884" HBox.hgrow="ALWAYS" />
                                  </children>
                               </HBox>
                               <HBox id="partCHtB">
@@ -1874,13 +1874,13 @@
                                     <HBox id="partHfirst" alignment="BOTTOM_LEFT">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum" />
-                                          <TextField />
+                                          <TextField fx:id="datum885" />
                                        </children>
                                     </HBox>
                                     <HBox id="partH" alignment="BOTTOM_LEFT">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="podpis ďaňovníka (zástupca)" wrappingWidth="150.0" />
-                                          <TextArea prefHeight="100.0" HBox.hgrow="ALWAYS" />
+                                          <TextArea fx:id="podpis886" prefHeight="100.0" HBox.hgrow="ALWAYS" />
                                        </children>
                                     </HBox>
                                  </children>

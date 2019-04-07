@@ -3,6 +3,7 @@ package application;
 import java.io.Serializable;
 
 abstract public class user implements Serializable {
+	private odovzdaneDP odovzdaneDanove = new odovzdaneDP();
 	private String meno;
 	private int vek;
 	private String pohlavie;
