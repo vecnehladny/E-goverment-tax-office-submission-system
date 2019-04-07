@@ -53,7 +53,6 @@
 	-fx-border-color: black;
 	-fx-border-width: 1 1 1 1;
     
-    -fx-spacing: 10;
 }
 
 #main #partHfirst {
@@ -81,6 +80,15 @@
     -fx-background-insets: 0;
     
     -fx-spacing: 10;
+}
+
+#main #predelfirst {
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-border-color: black;
+	-fx-border-width: 1 0 0 0;
 }
 
 #main #predel {

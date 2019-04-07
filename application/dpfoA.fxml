@@ -139,8 +139,86 @@
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="v deň podania daňového priznania na území Slovenskej republiky alebo v zahraničí" />
                            </children>
                         </HBox>
+                        <VBox id="partCH">
+                           <children>
+                              <HBox id="spacing">
+                                 <children>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[06] - Ulica" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[07] - Súpisné / orientačné číslo" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[08] - PSČ" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[09] - Obec" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[10] - Štát" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="predelfirst">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[11] - Daňovník s obmedzenou daňovou povinnosťou (nerezident) podľa § 2 písm. e) prvého a druhého bodu zákona a príslušného článku zmluvy o zamedzení dvojitého zdaneni)" wrappingWidth="600.0" />
+                              <CheckBox mnemonicParsing="false" text="áno" />
+                           </children>
+                        </HBox>
+                        <HBox id="predel">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresa bydliska alebo adresa pobytu na území Slovenskej republiky, kde sa daňovník zdržiaval v zdaňovacom období" />
+                           </children>
+                        </HBox>
+                        <VBox id="spacing">
+                           <children>
+                              <HBox id="partCH">
+                                 <children>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[12] - Ulica" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[13] - Súpisné / orientačné číslo" />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
                      </children>
                   </VBox>
+                  <HBox id="partO">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="II. ODDIEL - ÚDAJE O ZÁKONNOM ZÁSTUPCOVI ALEBO DEDIČOVI ALEBO ZÁSTUPCOVI, KTORÝ PODÁVA DAŇOVÉ PRIZNANIE (ďalej len &quot;zástupca&quot;)" wrappingWidth="1000.0" />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </content>
