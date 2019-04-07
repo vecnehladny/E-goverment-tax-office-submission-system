@@ -87,6 +87,7 @@ public class Controller implements Initializable {
 	private static Text icoi;
 	private static Text dici;
 	private static CheckBox platcadphi;
+	static Alert delete = new Alert(AlertType.CONFIRMATION);
 	
 //----------------------------------------addUser
 	
@@ -275,6 +276,25 @@ public class Controller implements Initializable {
 			}
 			
 			changeScene("main.fxml", event);
+		}
+		
+		else {
+			
+		}
+	}
+	
+	@FXML
+	public void deleteUser(ActionEvent event) throws IOException {
+		
+		delete.setContentText("Chcete vymazať: \"" + namei.getText() + "\" ?");
+		
+		Optional<ButtonType> result = delete.showAndWait();
+		
+		System.out.println(icoi.getText());
+		
+		if(result.get() == ButtonType.OK) {
+			Database.remove(icoi.getText());
+			changeScene("main.fxml",event);
 		}
 		
 		else {

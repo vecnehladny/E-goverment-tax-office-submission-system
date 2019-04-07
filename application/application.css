@@ -27,87 +27,73 @@
 	-fx-border-width: 1 1 1 1;
 	
 	-fx-padding: 10;
-    -fx-border-insets: 5;
-    -fx-background-insets: 5;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
     
     -fx-spacing: 10;
 }
 
-#main #partNP  {
+#main #partO, #main #part0 * {
 	-fx-background-color:  rgb(232,243,210);
 	-fx-border-color: black;
 	-fx-border-width: 1 1 1 1;
-	  -fx-border-insets: 5;
-    -fx-background-insets: 5;
-    
-    -fx-spacing: 10;
-}
-
-#main #partNPNS {
-	-fx-background-color:  rgb(232,243,210);
-	-fx-border-color: black;
-	-fx-border-width: 1 1 1 1;
-	  -fx-border-insets: 5;
-    -fx-background-insets: 5;
-}
-
-#main #partNM  {
-	-fx-background-color:  rgb(232,243,210);
-	-fx-border-color: black;
-	-fx-border-width: 1 1 1 1;
-	
-	-fx-padding: 0;
-    -fx-border-insets: 5;
-    -fx-background-insets: 5;
-    
-    -fx-spacing: 10;
-}
-
-#main #partC {
-	-fx-border-color: black;
-	-fx-border-width: 0 0 0 0;
 	
 	-fx-padding: 10;
-	-fx-spacing: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
     
+    -fx-spacing: 10;
+    
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
 }
 
-#main #partCS {
+#main #partNP {
+	-fx-background-color:  rgb(232,243,210);
 	-fx-border-color: black;
-	-fx-border-width: 0 0 0 0;
-	
-	-fx-padding: 10;
-	-fx-spacing: 10;
+	-fx-border-width: 1 1 1 1;
     
-}
-
-#main #partCNP {
-	-fx-border-color: black;
-	-fx-border-width: 0 0 0 0;
     -fx-spacing: 10;
 }
 
-#main #partCLB {
+#main #partHfirst {
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-spacing: 10;
+}
+
+#main #partH {
 	-fx-border-color: black;
 	-fx-border-width: 0 0 0 1;
 	
 	-fx-padding: 10;
-    -fx-spacing: 10;
-}
-
-#main #partCTB {
-	-fx-border-color: black;
-	-fx-border-width: 1 0 1 0;
-	-fx-padding: 10;
-    -fx-border-insets: 5;
-    -fx-background-insets: 5;
-    -fx-spacing: 10;
-}
-
-#main #partCTBNP {
-	-fx-border-color: black;
-	-fx-border-width: 1 0 1 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
     
+    -fx-spacing: 10;
+}
+
+#main #partCH {
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-spacing: 10;
+}
+
+#main #predel {
+	-fx-padding: 10;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    
+    -fx-border-color: black;
+	-fx-border-width: 1 0 1 0;
+}
+
+#main #bold {
+	-fx-font-weight: bold;
 }
 
 #main #spacing {

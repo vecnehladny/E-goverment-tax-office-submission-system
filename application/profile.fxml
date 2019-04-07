@@ -27,6 +27,12 @@
                <font>
                   <Font name="System Bold" size="13.0" />
                </font></Button>
+            <HBox HBox.hgrow="ALWAYS" />
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteUser" style="-fx-background-color: white;" text="Delete" textFill="#99ccff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
    </top>

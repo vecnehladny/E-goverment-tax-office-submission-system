@@ -23,7 +23,7 @@
                         <Image url="@userl.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="llog" cache="true" fill="WHITE">
+                  <Text fx:id="llog" fill="WHITE" fontSmoothingType="LCD">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font></Text>

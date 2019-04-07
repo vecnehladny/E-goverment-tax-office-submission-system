@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Database implements Serializable {
 	private static ArrayList<user> subjekti = new ArrayList<user>();
 
+	
 	public static ArrayList<user> search(String key) {
 		ArrayList<user> found = new ArrayList<user>();
 		
@@ -98,6 +99,7 @@ public class Database implements Serializable {
 	public static void remove(String ico) {
 		for(user u : subjekti) {
 			if(u.getICO().equalsIgnoreCase(ico)) {
+				System.out.println(u);
 				subjekti.remove(u);
 			}
 		}
