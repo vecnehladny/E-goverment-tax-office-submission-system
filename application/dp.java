@@ -84,9 +84,81 @@ public abstract class dp {
 	String t48;
 	String t49;
 	String t50;
+	String t51;
+	String t52;
+	String t53;
+	String t54;
+	String t55;
+	String t56;
+	String rodnecislo4;
+	String t57;
+	String t58;
+	String t59;
+	String t60;
+	String t61;
+	String t62;
+	String t63;
+	String t64;
+	String t65;
+	String t66;
+	String t67;
+	String t68;
+	String t69;
+	String t70;
+	String t71;
+	String t72;
+	String t73;
+	String t74;
+	String rodnecislo5;
+	String t75;
+	String t76;
+	String t77;
+	String t78;
+	String t79;
+	String t80;
+	String t81;
+	String t82;
+	boolean neuplatnujem821;
+	boolean splnam822;
+	String t83;
+	String podpis831;
+	String ico841;
+	String pravnaforma842;
+	String nazov843;
+	String nazov844;
+	String ulicas;
+	String cislos;
+	String pscs;
+	String obecs;
+	boolean zaslanieudajov841;
+	String rodnecislo6;
+	boolean osobitnezaz842;
+	String kodstatu1;
+	String kodstatu2;
+	String kodstatu3;
+	String prijmy1;
+	String prijmy2;
+	String prijmy3;
+	String vydavky1;
+	String vydavky2;
+	String vydavky3;
+	String t86;
+	String t87;
+	String datum871;
+	String podpis872;
+	boolean c873;
+	boolean c874;
+	boolean c875;
+	boolean c876;
+	boolean posta881;
+	boolean ucet882;
+	boolean zahranicie883;
+	String iban884;
+	String datum885;
+	String podpis886;
 	
 
-	dp(int rok, String typ, int prilohy, boolean potvrdenie){
+	dp(){
 		
 	}
 }

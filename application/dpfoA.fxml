@@ -96,9 +96,9 @@
                               <VBox id="partH" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Druh daňového priznania" />
-                                    <CheckBox mnemonicParsing="false" text="daňové priznanie" />
-                                    <CheckBox mnemonicParsing="false" text="opravné daňové priznanie" />
-                                    <CheckBox mnemonicParsing="false" text="dodatočné daňové priznanie" />
+                                    <CheckBox fx:id="typ1" mnemonicParsing="false" text="daňové priznanie" />
+                                    <CheckBox fx:id="typ2" mnemonicParsing="false" text="opravné daňové priznanie" />
+                                    <CheckBox fx:id="typ3" mnemonicParsing="false" text="dodatočné daňové priznanie" />
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(vyznačí sa x)" />
                                  </children>
                               </VBox>
@@ -196,7 +196,7 @@
                               <HBox id="predelfirst">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[11] - Daňovník s obmedzenou daňovou povinnosťou (nerezident) podľa § 2 písm. e) prvého a druhého bodu zákona a príslušného článku zmluvy o zamedzení dvojitého zdaneni)" wrappingWidth="600.0" />
-                                    <CheckBox mnemonicParsing="false" text="áno" />
+                                    <CheckBox fx:id="nerezident" mnemonicParsing="false" text="áno" />
                                  </children>
                               </HBox>
                               <HBox id="predel">
@@ -1266,8 +1266,8 @@
                                     </HBox>
                                     <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
                                        <children>
-                                          <Text fx:id="t66" strokeType="OUTSIDE" strokeWidth="0.0" text="[66]" />
-                                          <TextField />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[66]" />
+                                          <TextField fx:id="t66" />
                                        </children>
                                     </HBox>
                                  </children>
