@@ -1,8 +1,13 @@
 package application;
 
-public abstract class dp {
-	private String dic01;
-	private String datum02;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
+public class dp {
+	String dic01;
+	String datum02;
 	boolean typ1;
 	boolean typ2;
 	boolean typ3;
@@ -157,8 +162,48 @@ public abstract class dp {
 	String datum885;
 	String podpis886;
 	
+	
+	int rok;
+	String typ;
+	int prilohy;
+	boolean potvrdenie;
+	
 
-	dp(){
+	dp(int rok, String typ, String dic, int prilohy, boolean potvrdenie){
+		this.rok = rok;
+		this.typ = typ;
+		this.dic01 = dic;
+		this.prilohy = prilohy;
+		this.potvrdenie = potvrdenie;
+	}
+	
+	public dp() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int getRok() {
+		return this.rok;
+	}
+	
+	public String getTyp() {
+		return this.typ;
+	}
+	
+	public int getPrilohy(){
+		return this.prilohy;
+	}
+	
+	public boolean getPotvrdenie() {
+		return this.potvrdenie;
 		
+	}
+	
+
+	public String toString() {
+		return "\nrok: " + this.rok 
+				+ "\ntyp: " + this.typ
+				+ "\nprilohy: " + this.prilohy
+				+ "\npotvrdenie: " + this.potvrdenie
+				+ "\n";
 	}
 }

@@ -1,15 +1,15 @@
 package application;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class odovzdaneDP {
+public class odovzdaneDP implements Serializable {
 	private ArrayList<dp> odovzdane = new ArrayList<dp>();
 	
 	odovzdaneDP(){
-		this.odovzdane = null;
 	}
 	
-	public void add(dp d) {
+	public void pridaj(dp d) {
 		this.odovzdane.add(d);
 	}
 	
@@ -19,5 +19,13 @@ public class odovzdaneDP {
 	
 	public void remove(dp d) {
 		odovzdane.remove(d);
+	}
+	
+	public ArrayList<dp> getOdovzdane(){
+		return this.odovzdane;
+	}
+	
+	public dp getFirst() {
+		return odovzdane.get(0);
 	}
 }

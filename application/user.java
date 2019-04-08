@@ -1,9 +1,14 @@
 package application;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 abstract public class user implements Serializable {
-	private odovzdaneDP odovzdaneDanove = new odovzdaneDP();
+	public odovzdaneDP odovzdaneDanove = new odovzdaneDP();
 	private String meno;
 	private int vek;
 	private String pohlavie;
@@ -142,7 +147,6 @@ abstract public class user implements Serializable {
 	}
 	
 	user(){
-		
 	}
 
 
@@ -156,6 +160,7 @@ abstract public class user implements Serializable {
 		setICO(ICO);
 		setDIC(DIC);
 		setPlatcaDPH(platcaDPH);
+		pridajDp(new dpfoA(2018,"A",getDIC(),4,true));
 	}
 	
 	public void show() {
@@ -164,6 +169,10 @@ abstract public class user implements Serializable {
 			System.out.println(this.getMeno() + " " + this.getICO() );
 		}
 		
+	}
+	
+	public void pridajDp(dp d) {
+		this.odovzdaneDanove.pridaj(d);
 	}
 	
 	abstract String identity();
@@ -178,6 +187,7 @@ abstract public class user implements Serializable {
 				+ "\nICO: " + this.ICO
 				+ "\nDIC: " + this.DIC
 				+ "\nplatcaDPH: " + this.platcaDPH
-				+ "\n";
+				+ "\n\n"
+				+ this.odovzdaneDanove.getOdovzdane();
 	}
 }

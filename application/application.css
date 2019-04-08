@@ -19,6 +19,16 @@
 	-fx-text-fill: rgb(178,178,178);
 }
 
+#tlacidlaprof .button {
+	-fx-background-color: white;
+	-fx-text-fill: #99ccff;
+	-fx-font-weight: bold;
+}
+
+#dokument {
+	-fx-background-color: white;
+}
+
 #strana {
 	-fx-padding: 50 0 50 0;
 	-fx-spacing: 10;

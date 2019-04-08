@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 public class View extends Application {
 	public static uctovnik LOGGED = null;
 	public static uctovnik u = new uctovnik();
+	public static user current;
+	
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {

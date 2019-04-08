@@ -5,17 +5,30 @@ import java.net.URL;
 import java.util.*;
 
 import javafx.stage.*;
+import javafx.util.Callback;
 import javafx.scene.*;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Text;
+import javafx.beans.property.ReadOnlyIntegerWrapper;
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -23,6 +36,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+
 
 public class Controller implements Initializable {
 	
@@ -43,9 +57,6 @@ public class Controller implements Initializable {
 	
 	@FXML
 	private TextField key;
-	
-	@FXML
-	private TextArea vypis;
 	
 	@FXML
 	private TilePane found;
@@ -81,6 +92,31 @@ public class Controller implements Initializable {
 	@FXML
 	private CheckBox platcadphprof; 
 	
+	@FXML
+	private TableView<dp> odovzdaneTable;
+	
+	@FXML
+	private TableColumn<dp, Integer> obdobie;
+	
+	@FXML
+	private TableColumn<dp, String> typ;
+	
+	@FXML
+	private TableColumn<dp, Integer> prilohy;
+	
+	@FXML
+	private TableColumn<dp, Boolean> potvrdenie;
+	
+	@FXML
+	private HBox tlacidlaprof;
+	
+	@FXML
+	private TextField zarok;
+	
+	@FXML
+	private TextField dic01;
+	
+	private static HBox tlacidlaprofi;
 	private static Text namei;
 	private static Text yoi;
 	private static Text genderi;
@@ -88,8 +124,16 @@ public class Controller implements Initializable {
 	private static Text psci;
 	private static Text icoi;
 	private static Text dici;
+	private static TextField zaroki;
+	private static TextField dic01i;
 	private static CheckBox platcadphi;
+	static TableView<dp> odovzdaneTablei;
+	static TableColumn<dp, Integer> obdobiei;
+	static TableColumn<dp, String> typi;
+	static TableColumn<dp, Integer> prilohyi;
+	static TableColumn<dp, Boolean> potvrdeniei;
 	static Alert delete = new Alert(AlertType.CONFIRMATION);
+	static Alert addDP = new Alert(AlertType.CONFIRMATION);
 	
 //----------------------------------------addUser
 	
@@ -175,7 +219,7 @@ public class Controller implements Initializable {
 		ArrayList<Button> buttons = new ArrayList<Button>();
 		ArrayList<user> result = Database.search(key.getText());
 		
-		vypis.clear();
+		
 		found.getChildren().clear();
 		
 		for(int i = 0; i<result.size();i++) {
@@ -200,7 +244,6 @@ public class Controller implements Initializable {
 				}
 			});
 			
-			vypis.appendText(result.get(innerI).toString()+"\n");
 		}
 	}
 	
@@ -214,7 +257,7 @@ public class Controller implements Initializable {
 		ArrayList<Button> buttons = new ArrayList<Button>();
 		ArrayList<user> result = Database.getSubjekti();
 		
-		vypis.clear();
+		
 		found.getChildren().clear();
 		
 		for(int i = 0; i<result.size();i++) {
@@ -239,7 +282,7 @@ public class Controller implements Initializable {
 				}
 			});
 			
-			vypis.appendText(result.get(innerI).toString()+"\n");
+			
 		}
 		
 	}
@@ -320,7 +363,31 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	public void CloseWindow(ActionEvent event) throws IOException {
+		
+		 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+		 stage.close();
+	}
+	
+	public void changeWindow(String s,ActionEvent event) throws IOException {
+		try {
+			
+			Parent homepage = FXMLLoader.load(getClass().getResource(s));
+			Scene homeScene = new Scene(homepage);
+			
+			homeScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+	        Stage stage = new Stage();
+	        stage.setScene(homeScene);  
+	        stage.show();
+	    } catch(Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	
 	public static void profileData(user u) {
+		View.current = u;
+		
 		namei.setText(u.getMeno());
 		yoi.setText(Integer.toString(u.getVek()));
 		genderi.setText(u.getPohlavie());
@@ -329,12 +396,79 @@ public class Controller implements Initializable {
 		icoi.setText(u.getICO());
 		dici.setText(u.getDIC());
 		platcadphi.setSelected(u.isPlatcaDPH());
+		
+		
+		ObservableList<dp> dotabulky = FXCollections.observableArrayList(u.odovzdaneDanove.getOdovzdane());
+		System.out.println(dotabulky);
+		
+		obdobiei.setCellValueFactory(new PropertyValueFactory<dp, Integer>("rok"));
+		typi.setCellValueFactory(new PropertyValueFactory<dp, String>("typ"));
+		prilohyi.setCellValueFactory(new PropertyValueFactory<dp, Integer>("prilohy"));
+		potvrdeniei.setCellValueFactory(new PropertyValueFactory<dp, Boolean>("potvrdenie"));
+	
+		odovzdaneTablei.setItems(dotabulky);
+		
+		odovzdaneTablei.setOnMouseClicked(new EventHandler<javafx.scene.input.MouseEvent>() {
+			
+			@Override
+			public void handle(MouseEvent e) {
+				if(e.getClickCount() > 1) {
+					if(odovzdaneTablei.getSelectionModel().getSelectedIndex() >= 0) {
+						try {
+							showDP(odovzdaneTablei.getSelectionModel().getSelectedItem());
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+					}
+				}
+			}
+
+			private void showDP(dp selectedItem) throws IOException {
+				new Controller().changeWindow("dpfoA.fxml", new ActionEvent());
+				dic01i.setText(selectedItem.dic01);
+				zaroki.setText(selectedItem.zarok);
+			}
+		});
+		
+		
+		Button pridatDP = new Button("Add DP");
+		tlacidlaprofi.getChildren().add(pridatDP);
+		
+		pridatDP.setOnAction(e -> {
+			try {
+				new Controller().changeWindow("dpfoA.fxml", e);
+			}
+			
+			catch (IOException e1) {
+				e1.printStackTrace();
+			}
+		});
+		
+	}
+	
+	public void odovzdat(ActionEvent event) throws IOException {
+		addDP.setContentText("Chcete podať toto Daňové priznanie?");
+		
+		Optional<ButtonType> result = addDP.showAndWait();
+		
+		if(result.get() == ButtonType.OK) {
+			View.current.odovzdaneDanove.pridaj(new dpfoA(Integer.parseInt(this.zaroki.getText()),"A",this.dic01i.getText(),0,false));
+			CloseWindow(event);
+		}
+		
+		else {
+			
+		}
+		
 	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		//System.out.println(odovzdaneTable + "\n" + obdobie + "\n" + typ + "\n" + prilohy + "\n" + potvrdenie);
+		
 		this.llogi = llog;
 		
+		this.tlacidlaprofi = tlacidlaprof;
 		this.namei = nameprof;
 		this.yoi = yoprof;
 		this.genderi = genderprof;
@@ -342,7 +476,15 @@ public class Controller implements Initializable {
 		this.psci = pscprof;
 		this.icoi = icoprof;
 		this.dici = dicprof;
+		this.zaroki = zarok;
+		this.dic01i = dic01;
+		
 		this.platcadphi = platcadphprof;
+		this.odovzdaneTablei = odovzdaneTable;
+		this.obdobiei = obdobie;
+		this.typi = typ;
+		this.prilohyi = prilohy;
+		this.potvrdeniei = potvrdenie;
 		
 		this.menoaddi = menoadd;
 		this.vekaddi = vekadd;
@@ -353,6 +495,5 @@ public class Controller implements Initializable {
 		this.dicaddi = dicadd;
 		this.platcaaddi = platcaadd;
 		this.pravnickaaddi = pravnickaadd;
-		
 	}
 }
