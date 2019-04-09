@@ -1,11 +1,17 @@
-package application;
+package Controller;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
-
+import View.*;
+import application.Database;
+import application.dp;
+import application.dpfoA;
 import javafx.stage.*;
 import javafx.util.Callback;
+import users.fyzickaOsoba;
+import users.pravnickaOsoba;
+import users.user;
 import javafx.scene.*;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -350,10 +356,10 @@ public class Controller implements Initializable {
 	
 	public void changeScene(String s,ActionEvent event) throws IOException {
 			
-		Parent homepage = FXMLLoader.load(getClass().getResource(s));
+		Parent homepage = FXMLLoader.load(getClass().getResource("/Resources/"+ s));
 		Scene homeScene = new Scene(homepage);
 		
-		homeScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		homeScene.getStylesheets().add(getClass().getResource("/Resources/application.css").toExternalForm());
 		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(homeScene);
 		stage.show();
@@ -372,10 +378,10 @@ public class Controller implements Initializable {
 	public void changeWindow(String s,ActionEvent event) throws IOException {
 		try {
 			
-			Parent homepage = FXMLLoader.load(getClass().getResource(s));
+			Parent homepage = FXMLLoader.load(getClass().getResource("/Resources/" + s));
 			Scene homeScene = new Scene(homepage);
 			
-			homeScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			homeScene.getStylesheets().add(getClass().getResource("/Resources/application.css").toExternalForm());
 			
 	        Stage stage = new Stage();
 	        stage.setScene(homeScene);  

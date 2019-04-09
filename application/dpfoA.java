@@ -8,7 +8,7 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class dpfoA extends dp implements Serializable {
 
-	dpfoA(int rok, String typ, String dic, int prilohy, boolean potvrdenie) {
+	public dpfoA(int rok, String typ, String dic, int prilohy, boolean potvrdenie) {
 		super();
 		this.zarok = Integer.toString(rok);
 		this.rok = rok;

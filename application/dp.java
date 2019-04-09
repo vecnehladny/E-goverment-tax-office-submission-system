@@ -6,12 +6,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class dp {
-	String dic01;
+	public String dic01;
 	String datum02;
 	boolean typ1;
 	boolean typ2;
 	boolean typ3;
-	String zarok;
+	public String zarok;
 	String priezvisko03;
 	String meno04;
 	String titul05;
