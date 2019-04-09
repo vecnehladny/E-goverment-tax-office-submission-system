@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxWidth="-Infinity" prefWidth="1240.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <center>
+      <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="85.0" right="85.0" />
+         </padding>
+         <content>
+            <VBox id="dokument" maxWidth="-Infinity" prefWidth="1053.0" stylesheets="@application.css">
+               <children>
+                  <VBox id="strana" alignment="CENTER" spacing="10.0">
+                     <children>
+                        <HBox spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" maxWidth="-Infinity" prefWidth="120.0" style="-fx-border-color: black; -fx-border-width: 4 4 4 4;">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FO">
+                                       <font>
+                                          <Font name="System Bold" size="57.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="typ: A">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DAŇOVÉ PRIZNANIE">
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="K DANI Z PRÍJMOV FYZICKEJ OSOBY">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="pre daňovníka, ktorý má príjmy len zo závislej činnosti">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="podľa § 5 zákona č. 595/2003 Z. z. o dani z príjmov" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="v znení neskorších predpisov (ďalej len &quot;zákon&quot;)" />
+                                 </children>
+                              </VBox>
+                              <VBox maxWidth="-Infinity" prefWidth="120.0" />
+                           </children>
+                        </HBox>
+                        <VBox id="part">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Číselné údaje sa zarovnávajú vpravo, ostatné údaje sa píšu zľava. Nevyplnené riadky sa ponechávajú prázdne.">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Údaje sa vypĺňajú paličkovým písmom (podľa tohto vzoru), písacím strojom alebo tlačiarňou, a to čiernou alebo tmavomodrou farbou." />
+                              <TextField alignment="CENTER" focusTraversable="false" text="Á Ä B Č D É F G H Í J K L M N O P Q R Š T Ú V X Ý Ž   0 1 2 3 4 5 6 7 8 9" />
+                           </children>
+                        </VBox>
+                        <HBox id="partNP">
+                           <children>
+                              <VBox id="partHfirst" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[01] - DIČ (ak nie je pridelené, uvádza sa rodné číslo)" />
+                                    <TextField fx:id="dic01" />
+                                    <HBox id="spacing">
+                                       <children>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[02] - Dátum narodenia" />
+                                                <TextField fx:id="datum02" />
+                                             </children>
+                                          </VBox>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Riadok 02 sa vypĺňa, len ak ide o daňovníka, ktorý nemá pridelené DIČ ani &quot;rodné číslo&quot;" wrappingWidth="160.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox id="partH" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Druh daňového priznania" />
+                                    <CheckBox fx:id="typ1" mnemonicParsing="false" text="daňové priznanie" />
+                                    <CheckBox fx:id="typ2" mnemonicParsing="false" text="opravné daňové priznanie" />
+                                    <CheckBox fx:id="typ3" mnemonicParsing="false" text="dodatočné daňové priznanie" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="(vyznačí sa x)" />
+                                 </children>
+                              </VBox>
+                              <VBox id="partH" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <HBox id="spacing" alignment="BASELINE_LEFT">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Za rok" />
+                                          <TextField fx:id="zarok" text="20" />
+                                       </children>
+                                    </HBox>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum zistenia skutočnosti na &quot;podanie&quot; dodatočného daňového priznania" textAlignment="CENTER" wrappingWidth="260.0" />
+                                    <TextField />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="I. ODDIEL - ÚDAJE O DAŇOVNÍKOVI" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCH">
+                                 <children>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[03] - Priezvisko" />
+                                          <TextField fx:id="priezvisko03" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[04] - Meno" />
+                                          <TextField fx:id="meno04" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[05] - Titul" />
+                                          <TextField fx:id="titul05" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="predel">
+                                 <children>
+                                    <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresa trvalého pobytu" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="v deň podania daňového priznania na území Slovenskej republiky alebo v zahraničí" />
+                                 </children>
+                              </HBox>
+                              <VBox id="partCH">
+                                 <children>
+                                    <HBox id="spacing">
+                                       <children>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[06] - Ulica" />
+                                                <TextField fx:id="ulica06" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[07] - Súpisné / orientačné číslo" />
+                                                <TextField fx:id="cislo07" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="spacing">
+                                       <children>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[08] - PSČ" />
+                                                <TextField fx:id="psc08" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[09] - Obec" />
+                                                <TextField fx:id="obec09" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[10] - Štát" />
+                                                <TextField fx:id="stat10" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <HBox id="predelfirst">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[11] - Daňovník s obmedzenou daňovou povinnosťou (nerezident) podľa § 2 písm. e) prvého a druhého bodu zákona a príslušného článku zmluvy o zamedzení dvojitého zdaneni)" wrappingWidth="600.0" />
+                                    <CheckBox fx:id="nerezident" mnemonicParsing="false" text="áno" />
+                                 </children>
+                              </HBox>
+                              <HBox id="predel">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresa bydliska alebo adresa pobytu na území Slovenskej republiky, kde sa daňovník zdržiaval v zdaňovacom období" />
+                                 </children>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <HBox id="partCH">
+                                       <children>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[12] - Ulica" />
+                                                <TextField fx:id="ulica12" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[13] - Súpisné / orientačné číslo" />
+                                                <TextField fx:id="cislo13" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partCH">
+                                       <children>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[14] - PSČ" />
+                                                <TextField fx:id="psc14" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[15] - Obec" />
+                                                <TextField fx:id="obec15" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="II. ODDIEL - ÚDAJE O ZÁKONNOM ZÁSTUPCOVI ALEBO DEDIČOVI ALEBO ZÁSTUPCOVI, KTORÝ PODÁVA DAŇOVÉ PRIZNANIE (ďalej len &quot;zástupca&quot;)" wrappingWidth="1000.0" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCH">
+                                 <children>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[16] - Priezvisko" />
+                                          <TextField fx:id="priezvisko16" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[17] - Meno" />
+                                          <TextField fx:id="meno17" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[18] - Titul" />
+                                          <TextField fx:id="titul18" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCH">
+                                 <children>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[19] - Rodné číslo" />
+                                          <TextField fx:id="rodnecislo19" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[20] - Ulica" />
+                                          <TextField fx:id="ulica20" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[21] - Súpisné / orientačné číslo" />
+                                          <TextField fx:id="cislo21" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCH">
+                                 <children>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[22] - PSČ" />
+                                          <TextField fx:id="psc22" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[23] - Obec" />
+                                          <TextField fx:id="obec23" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[24] - Štát" />
+                                          <TextField fx:id="stat24" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partNP">
+                           <children>
+                              <VBox id="partCH">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[25] - Telefónne číslo" />
+                                    <TextField fx:id="telefon25" />
+                                 </children>
+                              </VBox>
+                              <VBox id="partCH" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[26] - Emailová adresa" />
+                                    <TextField fx:id="email26" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox id="part" maxWidth="-Infinity" prefWidth="950.0">
+                           <children>
+                              <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Záznamy daňového úradu" />
+                              <HBox id="spacing">
+                                 <children>
+                                    <VBox id="spacing" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <TextArea prefHeight="200.0" prefWidth="200.0" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Miesto pre evidenčné číslo" />
+                                       </children>
+                                    </VBox>
+                                    <VBox id="spacing" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <TextArea prefHeight="200.0" prefWidth="200.0" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Odtlačok prezentačnej pečiatky daňového úradu" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox id="strana" alignment="CENTER">
+                     <children>
+                        <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
+                              <TextField fx:id="rodnecislo2" />
+                           </children>
+                        </HBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="III. ODDIEL - ÚDAJE NA UPLATNENIE ZNÍŽENIA ZÁKLADU DANE (§ 11 zákona) A DAŇOVÉHO BONUSU (§ 33 zákona)" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCH">
+                                 <children>
+                                    <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Údaje o poberaní dôchodkov uvedených v § 11 ods. 6 zákona" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHfirst">
+                                 <children>
+                                    <VBox id="partCH">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Poberal (a) som na začiatku zdaňovacieho obdobia dôchodok (ky) uvedený (é) v § 11 ods. 6 zákona alebo mi bol (i) tento (tieto) dôchodok (ky) priznaný (é) spätne k začiatku príslušného zdaňovacieho obdobia" wrappingWidth="700.0" />
+                                       </children>
+                                    </VBox>
+                                    <HBox id="partH" alignment="CENTER">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[27]" />
+                                          <CheckBox fx:id="ano27" mnemonicParsing="false" text="áno" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <VBox id="partCH">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrnná suma dôchodku (ov) uvedeného (ných) v § 11 ods. 6 zákona za zdaňovacie obdobie v eurách (vypĺňa sa, len ak sa uplatňuje zníženie základu dane)" wrappingWidth="700.0" />
+                                       </children>
+                                    </VBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[28]" />
+                                          <TextField fx:id="dochodok28" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="predel">
+                                 <children>
+                                    <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Údaje o manželke (manželovi), ktorá (ý) žije s daňovníkom v domácnosti 5)  na uplatnenie nezdaniteľných častí základu dane" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="spacing" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <HBox id="partCHbB" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[29] - Priezvisko a meno" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox id="partCH">
+                                                   <children>
+                                                      <TextField fx:id="menopriezvisko29" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partHnP">
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <HBox id="partCHbB">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rodné číslo" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox id="partCH">
+                                                   <children>
+                                                      <TextField fx:id="rodnecislo291" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddle">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER" maxWidth="-Infinity" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[30]" />
+                                          <CheckBox fx:id="uplatnenienezdanitelenj30" mnemonicParsing="false" text="uplatňujem nezdaniteľnú časť základu dane na manželku (manžela) podľa § 11 ods. 3 zákona" wrapText="true" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vlastné príjmy (v euvrách)" />
+                                          <TextField fx:id="vlastnyprijem311" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Počet mesiacov" />
+                                          <TextField fx:id="mesiace312" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER" maxWidth="-Infinity" prefWidth="500.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[31]" />
+                                          <CheckBox mnemonicParsing="false" text="uplatňujem nezdaniteľnú časť základu dane na kúpeľnú starostlivosť za manželku (manžela) podľa § 11 ods. 14  zákona" wrapText="true" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preukázateľne zaplatené úhrady (najviac 50 eur)" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCH">
+                                 <children>
+                                    <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Údaje o vyživovaných deťoch žijúcich s daňovníkom v domácnosti na uplatnenie nezdaniteľnej časti základu dane na kúpeľnú starostlivosť (§ 11 ods.  4 zákona) a daňového zvýhodnenia na vyživované dieťa podľa § 33 zákona (ď&quot;&quot;alej len&quot;&quot;„daňový bonus podľa § 33 zákona&quot;)" wrappingWidth="1000.0" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHfirstnS">
+                                 <children>
+                                    <VBox>
+                                       <children>
+                                          <HBox id="partHfirst" maxHeight="-Infinity" prefHeight="25.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[32] - Priezvisko a meno" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHfirst" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="menopriezvisko321" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="menopriezvisko322" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="menopriezvisko323" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="menopriezvisko324" maxHeight="-Infinity" prefHeight="40.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="partHnPnS">
+                                       <children>
+                                          <HBox maxHeight="-Infinity" prefHeight="25.0">
+                                             <children>
+                                                <HBox id="partHfirst">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rodné číslo" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox id="partH">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kúpeľná starostlivosť" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHfirstnS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="rodnecislo321" maxHeight="-Infinity" prefHeight="40.0" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <CheckBox fx:id="kupele321" mnemonicParsing="false" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="rodnecislo322" maxHeight="-Infinity" prefHeight="40.0" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <CheckBox fx:id="kupele322" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="rodnecislo323" maxHeight="-Infinity" prefHeight="40.0" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <CheckBox fx:id="kupele323" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenS" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <TextField fx:id="rodnecislo324" maxHeight="-Infinity" prefHeight="40.0" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <CheckBox fx:id="kupele324" mnemonicParsing="false" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="partHnPnS" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <HBox id="partHfirst" maxHeight="-Infinity" prefHeight="25.0">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daňový bonus podľa § 33 zákona uplatňujem v mesiacoch" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHfirst" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <CheckBox fx:id="vsetky321" mnemonicParsing="false" text="1-12" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Slider fx:id="mesiacov321" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <CheckBox fx:id="vsetky322" mnemonicParsing="false" text="1-12" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Slider fx:id="mesiacov322" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <CheckBox fx:id="vsetky323" mnemonicParsing="false" text="1-12" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Slider fx:id="mesiacov323" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle" alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0">
+                                             <children>
+                                                <CheckBox fx:id="vsetky324" mnemonicParsing="false" text="1-12" />
+                                                <HBox id="partHnP" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Slider fx:id="mesiacov324" blockIncrement="1.0" majorTickUnit="1.0" max="12.0" min="1.0" minorTickCount="1" showTickLabels="true" HBox.hgrow="ALWAYS" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="predellast">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[33]" />
+                                    <CheckBox fx:id="dalsiedeti33" mnemonicParsing="false" text="Údaje o ďalších vyživovaných deťoch uvádzam v IX. oddiele v členení podľa r. 32" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCH">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[34]" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preukázateľne zaplatené úhrady na kúpelnú starostlivosť za vyživované dieťa (deti) v úhrne najviac do výšky 50 eur za rok za každé z týchto detí" wrappingWidth="500.0" />
+                                    <TextField fx:id="zakupele34" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IV. ODDIEL - ÚDAJE NA UPLATNENIE DAŇOVÉHO BONUSU NA ZAPLATENÉ ÚROKY (§ 33a zákona)" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[35]" />
+                                          <CheckBox fx:id="danovybonus35" maxWidth="-Infinity" mnemonicParsing="false" prefWidth="300.0" text="uplatňujem daňový bonus na zaplatené úroky podľa § 33a zákona" wrapText="true" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zaplatené úroky za zdaňovacie obdobie (v eurách)" wrappingWidth="200.0" />
+                                          <TextField fx:id="uroky351" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Počet mesiacov" wrappingWidth="60.0" HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="mesiacov352" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="V. ODDIEL - VÝPOČET ZÁKLADU DANE Z PRÍJMOV ZO ZÁVISLEJ ČINNOSTI (§ 5 zákona) - v eurách" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn príjmov od všetkých zamestnávateľov" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[36]" />
+                                          <TextField fx:id="t36" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="úhrn príjmov plynúcich na základe dohôd o prácach vykonávaných mimo pracovného pomeru" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[36a]" />
+                                          <TextField fx:id="t361" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox id="strana" alignment="CENTER">
+                     <children>
+                        <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
+                              <TextField fx:id="rodnecislo3" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn povinného poistného (§ 5 ods. 8 zákona)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[37]" />
+                                          <TextField fx:id="t37" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="úhrn poistného na sociálne poistenie (zabezpečenie)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[37a]" />
+                                          <TextField fx:id="t371" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="úhrn poistného na zdravotné poistenie" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[37b]" />
+                                          <TextField fx:id="t372" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Základ dane podľa § 5 ods. 8 zákona (r. 36 - r. 37)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[38]" />
+                                          <TextField fx:id="t38" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VI. ODDIEL - VÝPOČET DANE podľa § 15 zákona - v eurách" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona ods. 2 - na daňovníka" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[39]" />
+                                          <TextField fx:id="t39" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona ods. 3 - na manželku (manžela)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[40]" />
+                                          <TextField fx:id="t40" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona ods. 10 - na preukázateľne zaplatené príspevky na doplnkové dôchodkové sporenie maximálne vo výške 180 eur" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[41]" />
+                                          <TextField fx:id="t41" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona ods. 14 - na preukázateľne zaplatené úhrady súvisiace s kúpeľnou starostlivosťou a s ňou spojenými službami" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[42]" />
+                                          <TextField fx:id="t42" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona z toho za daňovníka" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[42a]" />
+                                          <TextField fx:id="t421" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona z toho za manželku (manžela) a deti" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[42b]" />
+                                          <TextField fx:id="t422" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zníženie základu dane podľa § 11 zákona spolu (r. 39 + r. 40 + r. 41 + r. 42) maximálne do výšky základu dane v r. 38" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[43]" />
+                                          <TextField fx:id="t43" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Základ dane z r. 38 znížený o sumu z r. 43 zvýšený o sumu príspevkov, o ktorú sa zvyšuje základ dane podľa § 11 ods. 9 a 13 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[44]" />
+                                          <TextField fx:id="t44" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň podľa § 15 zákona zo základu dane z r. 44 zaokrúhlená na eurocenty nadol" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[45]" />
+                                          <TextField fx:id="t45" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zamestnanecká prémiazaokrúhlená na eurocenty nahor" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[46]" />
+                                          <TextField fx:id="t46" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma zamestnaneckej prémie nesprávne vyplatenej zamestnávateľom alebo správcom dane" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[47]" />
+                                          <TextField fx:id="t47" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane po vyňatí príjmov zo zdrojov v zahraničí - Úhrn vyňatých príjmov (základov dane)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[48]" />
+                                          <TextField fx:id="t48" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane po vyňatí príjmov zo zdrojov v zahraničí - Základ dane znížený o úhrn vyňatých príjmov (základov dane) (r. 44 - r. 48) (ak je rozdiel r. 44 a r. 48 záporný, uvádza v49 nula)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[49]" />
+                                          <TextField fx:id="t49" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň podľa § 15 zákona po vyňatí príjmov zo zdrojov v zahraničí zaokrúhlená na eurocenty nadol zo základu dane z r. 49" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[50]" />
+                                          <TextField fx:id="t50" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane uznanej na zápočet na tuzemskú daňovú povinnosť zo zaplatenej dane v zahraničí - &quot;Úhrn príjmov (základov dane) zo zdrojov v zahraničí (zaokrúhlené na eurocenty nadol)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[51]" />
+                                          <TextField fx:id="t51" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane uznanej na zápočet na tuzemskú daňovú povinnosť zo zaplatenej dane v zahraničí - Daň zaplatená v zahraničí z príjmov z r. 51 (zaokrúhlené na eurocenty nadol)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text fx:id="t52" strokeType="OUTSIDE" strokeWidth="0.0" text="[52]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane uznanej na zápočet na tuzemskú daňovú povinnosť zo zaplatenej dane v zahraničí - Výpočet percenta dane na účely zápočtu r. 51 : [(r. 38 - r. 48) alebo r. 38] x 100" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[53]" />
+                                          <TextField fx:id="t53" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane uznanej na zápočet na tuzemskú daňovú povinnosť zo zaplatenej dane v zahraničí - Z dane zaplatenej v zahraničí možno započítať [(r. 50 alebo r. 45) x r. 53) :100] (zaokrúhlené na eurocenty nahor)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[54]" />
+                                          <TextField fx:id="t54" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výpočet dane uznanej na zápočet na tuzemskú daňovú povinnosť zo zaplatenej dane v zahraničí - Daň uznaná na zápočet(r. 54 maximálne do sumy v r. 52)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[55]" />
+                                          <TextField fx:id="t55" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť)(r. 45 alebo r. 50 alebo r. 45 - r. 55 alebo r. 50 - r. 55) " wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[56]" />
+                                          <TextField fx:id="t56" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox id="strana" alignment="CENTER">
+                     <children>
+                        <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
+                              <TextField fx:id="rodnecislo4" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nárok na daňový bonus (úhrnná suma daňového bonusu na všetky vyživované deti) podľa § 33 zákona" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[57]" />
+                                          <TextField fx:id="t57" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť) znížená o daňový bonus podľa § 33 zákona (r. 56 - r. 57)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[58]" />
+                                          <TextField fx:id="t58" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu podľa § 33 zákona priznaného a vyplateného zamestnávateľom" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[59]" />
+                                          <TextField fx:id="t59" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel r. 57 - r. 59 &gt; 0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[60]" />
+                                          <TextField fx:id="t60" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu podľa § 33 zákona na poukázanie správcom dane 14) r. 60 - r. 56 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[61]" />
+                                          <TextField fx:id="t61" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zamestnávateľom nesprávne vyplatený daňový bonus podľa § 33 zákona   r. 59 - r. 57 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[62]" />
+                                          <TextField fx:id="t62" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nárok na daňový bonus na zaplatené úroky podľa § 33a zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[63]" />
+                                          <TextField fx:id="t63" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť) znížená o daňový bonus podľa§ 33 zákona a o daňový bonus na zaplatené úroky podľa § 33a zákona (r. 58 - r. 63)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[64]" />
+                                          <TextField fx:id="t64" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu na zaplatené úroky podľa § 33a zákona priznaného a vyplateného zamestnávateľom" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[65]" />
+                                          <TextField fx:id="t65" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel r. 63 - r. 65 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[66]" />
+                                          <TextField fx:id="t66" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu na zaplatené úroky podľa § 33a zákona na poukázanie správcom dane 18) r. 66 - r. 58 &gt; 0" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[67]" />
+                                          <TextField fx:id="t67" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn preddavkov na daň zaplatených podľa § 34 ods. 6 a 7 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[68]" />
+                                          <TextField fx:id="t68" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn preddavkov na daň zaplatených podľa § 34 zákona okrem preddavkov zaplatených podľa § 34 ods. 6 a 7 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[69]" />
+                                          <TextField fx:id="t69" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn preddavkov na daň zrazených podľa § 35 zákona" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[70]" />
+                                          <TextField fx:id="t70" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň na úhradu vrátane zamestnávateľom nesprávne vyplatených daňových bonusov alebo zamestnaneckej prémie r. 56 - r. 57 + r. 59 + r. 61 - r. 63 + r. 65 + r. 67 - r. 68 - r. 69 - r. 70 + r. 47 (+)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[71]" />
+                                          <TextField fx:id="t71" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daňový preplatok znížený o zamestnávateľom nesprávne vyplatené daňové bonusy alebo zamestnaneckú prémiu+ r. 59 + r. 61 - r. 63 + r. 65 + r. 67 - r. 68 - r. 69 - r. 70 + r. 47 (-)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[72]" />
+                                          <TextField fx:id="t72" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VII. ODDIEL - ROZDIELY Z DODATOČNÉHO DAŇOVÉHO PRIZNANIA - v eurách" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň (daňová povinnosť) z r. 56 daňového priznania alebo r. 105 daňového priznania fyzickej osoby typ B  alebo r. 06 ročného zúčtovania preddavkov na daň z príjmov zo závislej činnosti" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[73]" />
+                                          <TextField fx:id="t73" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zvýšenie (+) alebo zníženie (-) dane (r. 56 - r. 73)" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[74]" />
+                                          <TextField fx:id="t74" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox id="strana" alignment="CENTER">
+                     <children>
+                        <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
+                              <TextField fx:id="rodnecislo5" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň na úhradu alebo daňový preplatok z r. 71 alebo r. 72 daňového priznania 21) alebo r. 125 alebo r. 126 daňového priznania fyzickej osoby typ B alebo r. 21 ročného zúčtovania preddavkov na daň z príjmov zo závislej činnosti" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[75]" />
+                                          <TextField fx:id="t75" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daň na úhradu (+) alebo daňový preplatok (-) (r. 71 alebo r. 72) - r. 75 + [(r. 83 daňového priznania    - 2% alebo3% z r. 64) &gt; 0] alebo (r. 71 alebo r. 72) - r. 75 + [(r. 13 vyhlásenia o poukázaní sumy podielu zaplatenej dane - 2 % alebo 3 %z r. 64) &gt; 0] alebo (r. 71 alebo r. 72) - r. 75 + [(r. 141 daňového priznania fyzickej osoby typ B21)  - 2 % alebo 3 % z r. 64) &gt; 0]" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[76]" />
+                                          <TextField fx:id="t76" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu podľa § 33 zákona na poukázanie správcom dane z r. 61 daňového priznania alebo r. 110 daňovéhopriznania fyzickej osoby typ B  alebo r. 12 ročné  o zúčtovania&quot;&quot;preddavkov na daň z príjmov zo závislej činnost" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[77]" />
+                                          <TextField fx:id="t77" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel súm daňového bonusu podľa § 33 zákona na poukázanie správcom dane (+), na vrátenie správcovi dane (-)   (r. 61 - r. 77)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[78]" />
+                                          <TextField fx:id="t78" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma zamestnaneckej prémie na poukázanie správcom dane z r. 46 daňového priznania alebo r. 7 ročného zúčtovania preddavkov na daň z príjmov zo závislej činnosti" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[79]" />
+                                          <TextField fx:id="t79" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel súm zamestnaneckej prémie na poukázanie správcom dane (+), na vrátenie správcovi dane (-)   (r. 46 - r. 79)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[80]" />
+                                          <TextField fx:id="t80" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suma daňového bonusu na zaplatené úroky podľa § 33a zákona na poukázanie správcom dane z r. 67 daňového priznania alebo r. 116 daňového priznania fyzickej osoby typ B21)alebo r. 16 ročného zúčtovania preddavkov na daň z príjmov islej činnosti" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[81]" />
+                                          <TextField fx:id="t81" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="spacing">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rozdiel súm daňového bonusu na zaplatené úroky podľa § 33a zákona na poukázanie správcom dane (+), na vrátenie správcovi dane (-)   (r. 67 - r. 81)" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="CENTER_LEFT" maxWidth="-Infinity" prefWidth="300.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[82]" />
+                                          <TextField fx:id="t82" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="VIII. ODDIEL &quot;VYHLÁSENIE o poukázaní podielu zaplatenej dane z príjmov fyzyickej osoby podľa § 50 zákona" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <HBox id="partCHbB" maxWidth="-Infinity" prefWidth="220.0">
+                                             <children>
+                                                <CheckBox fx:id="neuplatnujem821" mnemonicParsing="false" text="neuplatňujem postup podľa § 50 zákona" wrapText="true" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCH" maxWidth="-Infinity" prefWidth="200.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2% alebo 3% zo zaplatenej dane (minimálne 3 eurá) z r. 64 zaokrúhlené na eurocenty nadol" wrappingWidth="200.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="partHnP">
+                                       <children>
+                                          <HBox id="partCHbB">
+                                             <children>
+                                                <CheckBox fx:id="splnam822" mnemonicParsing="false" text="spĺňam podmienky na poukázanie 3 % z dane" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCH" alignment="CENTER" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[83]" />
+                                                <TextField fx:id="t83" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="partH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <TextField fx:id="podpis831" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
+                                          <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="podpis daňovníka (zástupcu)" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="podpisuje sa len pri uplatňovaní postupu podľa § 50 zákona" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox id="predelBold">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[84] - ÚDAJE O PRIJÍMATEĽOVI" />
+                                 </children>
+                              </HBox>
+                              <VBox id="spacing">
+                                 <children>
+                                    <HBox id="partCH">
+                                       <children>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IČO" />
+                                                <TextField fx:id="ico841" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Právna forma" />
+                                                <TextField fx:id="pravnaforma842" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partCH">
+                                       <children>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Obchodné meno (názov)" />
+                                                <TextField fx:id="nazov843" />
+                                                <TextField fx:id="nazov844" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="predel">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sídlo" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partCH">
+                                       <children>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica" />
+                                                <TextField fx:id="ulicas" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Súpisné / orientačné číslo" />
+                                                <TextField fx:id="cislos" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partCH">
+                                       <children>
+                                          <VBox id="spacing">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="PSČ" />
+                                                <TextField fx:id="pscs" />
+                                             </children>
+                                          </VBox>
+                                          <VBox id="spacing" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Obec" />
+                                                <TextField fx:id="obecs" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox id="predel">
+                                       <children>
+                                          <CheckBox fx:id="zaslanieudajov841" mnemonicParsing="false" text="súhlasím so zaslaním údajov (meno, priezvisko a trvalý pobyt) mnou určenému prijímateľovi podielu zaplatenej dane uvedenému v r. 84 podľa § 50 ods. 8 zákona" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox id="strana" alignment="CENTER">
+                     <children>
+                        <HBox id="part" alignment="BASELINE_LEFT" maxWidth="-Infinity">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DIČ (Rodné číslo)" />
+                              <TextField fx:id="rodnecislo6" />
+                           </children>
+                        </HBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IX. ODDIEL - MIESTO NA OSOBITNÉ ZÁZNAMY DAŇOVNÍKA" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <HBox id="padding">
+                                 <children>
+                                    <CheckBox fx:id="osobitnezaz842" mnemonicParsing="false" text="Uvádzam osobitné záznamy" />
+                                 </children>
+                              </HBox>
+                              <HBox id="predel">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Údaje o príjmoch zo závislej činnosti z r. 36 daňovníka s neobmedzenou daňovou povinnosťou plynúcich zo zdrojov v zahraničí, ktoré sú súčasťou základu dane, pričom sa uvádza číselný kód štátu podľa   yhlášky Štatistického úradu Slovenskej republiky č. 112/2012 Z. z., ktorou sa vydáva&quot;&quot;Štatistický číselník krajín v znení vyhlášky č. 108/2014 Z. z." wrappingWidth="1000.0" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHmiddlenS">
+                                 <children>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <HBox id="partCHmiddle" alignment="CENTER">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kód štátu" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle">
+                                             <children>
+                                                <TextField fx:id="kodstatu1" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle">
+                                             <children>
+                                                <TextField fx:id="kodstatu2" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenP">
+                                             <children>
+                                                <TextField fx:id="kodstatu3" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="partHnPnS" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <HBox id="partCHmiddle" alignment="CENTER">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Príjmy" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle">
+                                             <children>
+                                                <TextField fx:id="prijmy1" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle">
+                                             <children>
+                                                <TextField fx:id="prijmy2" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenP">
+                                             <children>
+                                                <TextField fx:id="prijmy3" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox id="partHnPnS" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <HBox id="partCHmiddle" alignment="CENTER">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Výdavky" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle">
+                                             <children>
+                                                <TextField fx:id="vydavky1" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddle">
+                                             <children>
+                                                <TextField fx:id="vydavky2" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <HBox id="partCHmiddlenP">
+                                             <children>
+                                                <TextField fx:id="vydavky3" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox id="partCH">
+                                 <children>
+                                    <TextArea prefHeight="200.0" prefWidth="200.0" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ak nepostačuje miesto na osobitné záznamy, uvádzajú sa v tomto členení v osobitnej prílohe, ktorá je súčasťou daňového priznania." />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="X. ODDIEL - ÚDAJE O DAŇOVNÍKOVI S OBMEDZENOU DAŇOVOU POVINNOSŤOU (nerezidentovi)" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <VBox id="partCHbB">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[86] - Štát daňovej rezidencie" />
+                                    <TextField fx:id="t86" />
+                                 </children>
+                              </VBox>
+                              <HBox>
+                                 <children>
+                                    <HBox id="padding" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Úhrn všetkých zdaniteľných príjmov plynúcich zo zdrojov na území Slovenskej republiky a zo zdrojov v zahraničí v eurách" wrappingWidth="500.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[86]" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox id="partNP">
+                           <children>
+                              <VBox id="partCH">
+                                 <children>
+                                    <HBox id="spacing">
+                                       <children>
+                                          <HBox id="spacing" alignment="CENTER_LEFT">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="[87] - počet príloh" />
+                                                <TextField fx:id="t87" />
+                                             </children>
+                                          </HBox>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Uvádza sa počet všetkých príloh, ktoré sú súčasťou daňového priznania" wrappingWidth="300.0" />
+                                       </children>
+                                    </HBox>
+                                    <VBox id="spacing">
+                                       <children>
+                                          <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="Vyhlasujem, že všetky údaje uvedené v daňovom priznaní sú správne a úplné." />
+                                          <HBox id="spacing" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum" />
+                                                <TextField fx:id="datum871" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox id="partCH" alignment="CENTER" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <TextArea fx:id="podpis872" prefHeight="100.0" prefWidth="200.0" />
+                                    <Text id="bold" strokeType="OUTSIDE" strokeWidth="0.0" text="podpis daňovníka (zástupcu)" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox id="partO">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="XI. ODDIEL - ŽIADOSŤ O VYPLATENIE DAŇOVÉHO BONUSU, O VRÁTENIE DAŇOVÉHO PREPLATKU ALEBO VYPLATENIE ZAMESTNANECKEJ PRÉMIE" wrappingWidth="1000.0" />
+                           </children>
+                        </HBox>
+                        <VBox id="partNP">
+                           <children>
+                              <VBox id="partCH" maxWidth="-Infinity" prefWidth="900.0">
+                                 <children>
+                                    <CheckBox fx:id="c873" mnemonicParsing="false" text="Žiadam o vyplatenie daňového bonusu alebo rozdielu daňového bonusu podľa § 33 zákona (r. 61 alebo rozdiel z r. 78, ak je kladný)" wrapText="true" />
+                                    <CheckBox fx:id="c874" mnemonicParsing="false" text="Žiadam o vyplatenie zamestnaneckej prémie podľa § 32a zákona (z r. 46 alebo rozdiel z r. 80, ak je kladný)" wrapText="true" />
+                                    <CheckBox fx:id="c875" mnemonicParsing="false" text="Žiadam o vyplatenie daňového bonusu na zaplatené úroky alebo rozdielu daňového bonusu na zaplatené úroky podľa § 33a zákona (r. 67 alebo rozdiel z r. 82, ak je kladný)" wrapText="true" />
+                                    <CheckBox fx:id="c876" mnemonicParsing="false" text="Žiadam o vrátenie daňového preplatku podľa § 79 zákona č. 563/2009 Z. z. o správe daní (daňový poriadok) a o zmene a doplnení niektorých zákonov v znení neskorších predpisov (z r. 72 alebo rozdiel z r. 76, ak je záporný" wrapText="true" />
+                                 </children>
+                              </VBox>
+                              <HBox id="partCH" alignment="CENTER">
+                                 <children>
+                                    <CheckBox fx:id="posta881" mnemonicParsing="false" text="poštovou poukážkou" />
+                                    <CheckBox fx:id="ucet882" mnemonicParsing="false" text="na účet" />
+                                    <CheckBox fx:id="zahranicie883" mnemonicParsing="false" text="na účet v zahraničí, ktorého nie som majiteľom" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCH" alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="IBAN" />
+                                    <TextField fx:id="iban884" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox id="partCHtB">
+                                 <children>
+                                    <HBox id="partHfirst" alignment="BOTTOM_LEFT">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dátum" />
+                                          <TextField fx:id="datum885" />
+                                       </children>
+                                    </HBox>
+                                    <HBox id="partH" alignment="BOTTOM_LEFT">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="podpis ďaňovníka (zástupca)" wrappingWidth="150.0" />
+                                          <TextArea fx:id="podpis886" prefHeight="100.0" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #99ccff;" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="odovzdat" mnemonicParsing="false" onAction="#odovzdat" style="-fx-background-color: white;" text="Odovzdať" textFill="#99ccff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="100.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>
