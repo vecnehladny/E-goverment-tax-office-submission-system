@@ -1,9 +1,7 @@
-package users;
+package application;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-
-import application.dp;
 
 public class odovzdaneDP implements Serializable {
 	private ArrayList<dp> odovzdane = new ArrayList<dp>();

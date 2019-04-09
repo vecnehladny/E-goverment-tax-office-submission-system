@@ -9,10 +9,6 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import users.fyzickaOsoba;
-import users.pravnickaOsoba;
-import users.user;
-
 public class Database implements Serializable {
 	private static ArrayList<user> subjekti = new ArrayList<user>();
 
@@ -157,9 +153,9 @@ public class Database implements Serializable {
 		System.out.println("databaza vytvore");
 	}
 	
-	public Database() {
-		//create();
+	Database() {
+		create();
 		//save();
-		load();
+		//load();
 	}
 }

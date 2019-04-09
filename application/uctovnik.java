@@ -1,4 +1,4 @@
-package users;
+package application;
 
 public class uctovnik extends user {
 	private String username;
@@ -21,7 +21,7 @@ public class uctovnik extends user {
 		this.admin = true;
 	}
 	
-	public uctovnik(){
+	uctovnik(){
 		setMeno("Viktor Klíma"); 
 		setVek(20);
 		setPohlavie("Muž");

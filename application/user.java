@@ -1,11 +1,8 @@
-package users;
+package application;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import Controller.Controller;
-import application.dp;
-import application.dpfoA;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
