@@ -9,7 +9,7 @@ import javafx.beans.property.SimpleStringProperty;
 public class dpfoA extends dp implements Serializable {
 
 	public dpfoA(int rok, String typ, String dic, int prilohy, boolean potvrdenie) {
-		super();
+		//super(rok,typ,dic,prilohy,potvrdenie);
 		this.zarok = Integer.toString(rok);
 		this.rok = rok;
 		this.typ = typ;

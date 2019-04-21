@@ -2,5 +2,5 @@ package users;
 
 public interface platcaDPH {
 
-	public void zaplatDPH();
+	public float zaplatDPH();
 }

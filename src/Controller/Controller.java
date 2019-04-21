@@ -8,7 +8,6 @@ import application.Database;
 import application.dp;
 import application.dpfoA;
 import javafx.stage.*;
-import javafx.util.Callback;
 import users.fyzickaOsoba;
 import users.pravnickaOsoba;
 import users.user;
@@ -17,12 +16,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceDialog;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -30,11 +25,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
 import javafx.scene.text.Text;
-import javafx.beans.property.ReadOnlyIntegerWrapper;
-import javafx.beans.property.ReadOnlyStringWrapper;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -344,7 +334,7 @@ public class Controller implements Initializable {
 		System.out.println(icoi.getText());
 		
 		if(result.get() == ButtonType.OK) {
-			Database.remove(icoi.getText());
+			Database.vymaz(View.current);
 			changeScene("main.fxml",event);
 		}
 		

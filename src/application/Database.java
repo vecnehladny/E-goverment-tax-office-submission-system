@@ -94,21 +94,31 @@ public class Database implements Serializable {
 		
 	}
 	
-	public static void add(user u) {
-		subjekti.add(u);
+	public static void update() {
 		save();
 		load();
 	}
 	
-	public static void remove(String ico) {
+	public static void add(user u) {
+		subjekti.add(u);
+		update();
+	}
+	
+	public static void vymaz(user current) {
+		subjekti.remove(current);
+		update();
+	}
+	
+	public void test() {
 		for(user u : subjekti) {
-			if(u.getICO().equalsIgnoreCase(ico)) {
-				System.out.println(u);
-				subjekti.remove(u);
+			if(u instanceof fyzickaOsoba) {
+				System.out.println("----ja som fyzicka osoba: " + u.getMeno() + " " + u.getICO());
+			}
+			
+			else {
+				System.out.println("----" + u.getMeno() + " " + u.getICO());
 			}
 		}
-		save();
-		load();
 	}
 	
 	public void create() {
@@ -161,5 +171,6 @@ public class Database implements Serializable {
 		//create();
 		//save();
 		load();
+		//test();
 	}
 }

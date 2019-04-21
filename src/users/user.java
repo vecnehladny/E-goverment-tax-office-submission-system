@@ -10,7 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-abstract public class user implements Serializable {
+abstract public class user implements Serializable, platcaDPH {
 	public odovzdaneDP odovzdaneDanove = new odovzdaneDP();
 	private String meno;
 	private int vek;
@@ -154,16 +154,6 @@ abstract public class user implements Serializable {
 
 
 	user(String meno, int vek, String pohlavie, String adresa, String mesto, String PSC, String ICO, String DIC, boolean platcaDPH){
-		setMeno(meno); 
-		setVek(vek);
-		setPohlavie(pohlavie);
-		setAdresa(adresa);
-		setMesto(mesto);
-		setPSC(PSC);
-		setICO(ICO);
-		setDIC(DIC);
-		setPlatcaDPH(platcaDPH);
-		pridajDp(new dpfoA(2018,"A",getDIC(),4,true));
 	}
 	
 	public void show() {

@@ -170,6 +170,7 @@ public class dp {
 	
 
 	dp(int rok, String typ, String dic, int prilohy, boolean potvrdenie){
+		this.zarok = Integer.toString(rok);
 		this.rok = rok;
 		this.typ = typ;
 		this.dic01 = dic;
