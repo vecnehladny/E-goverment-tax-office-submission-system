@@ -32,19 +32,16 @@ public class fyzickaOsoba extends user {
 	@Override
 	public void show() {
 			Controller.profileData(this);
-			System.out.println(this.getMeno() + " " + this.getICO() );
-			System.out.println("|||||"+this.odovzdaneDanove.getOdovzdane()+"||||||");
 	}
 
 	@Override
 	public float zaplatDPH() {
-		
 		if(this.isPlatcaDPH()) {
 			ArrayList<dp> odovzdane = this.odovzdaneDanove.getOdovzdane();
 			
 			for(dp d : odovzdane) {
 				if(d instanceof dpfoA) {
-					
+					return (float) ((Float.parseFloat(d.t40) - Float.parseFloat(d.t43) + Float.parseFloat(d.t37)) * 0.47);
 				}
 				else {
 					continue;

@@ -115,6 +115,30 @@ public class Controller implements Initializable {
 	@FXML
 	private TextField dic01;
 	
+	@FXML
+	private TextField t36;
+	
+	@FXML
+	private TextField t361;
+	@FXML
+	private TextField t37;
+	@FXML
+	private TextField t371;
+	@FXML
+	private TextField t372;
+	@FXML
+	private TextField t38;
+	@FXML
+	private TextField t39;
+	@FXML
+	private TextField t40;
+	@FXML
+	private TextField t43;
+	@FXML
+	private TextField t70;
+	@FXML
+	private TextField t72;	
+	
 	private static HBox tlacidlaprofi;
 	private static Text namei;
 	private static Text yoi;
@@ -125,7 +149,20 @@ public class Controller implements Initializable {
 	private static Text dici;
 	private static TextField zaroki;
 	private static TextField dic01i;
+	private static TextField t36i;
+	private static TextField t361i;
+	private static TextField t37i;
+	private static TextField t371i;
+	private static TextField t372i;
+	private static TextField t38i;
+	private static TextField t39i;
+	private static TextField t40i;
+	private static TextField t43i;
+	private static TextField t70i;
+	private static TextField t72i;
 	private static CheckBox platcadphi;
+	
+	
 	static TableView<dp> odovzdaneTablei;
 	static TableColumn<dp, Integer> obdobiei;
 	static TableColumn<dp, String> typi;
@@ -302,6 +339,7 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	//polymorfizmus
 	@FXML
 	public void vypocitajDPH(ActionEvent event) throws IOException {
 		try {
@@ -309,7 +347,7 @@ public class Controller implements Initializable {
 			
 			for (user u : subjekti) {
 				if(u instanceof fyzickaOsoba) {
-					
+					System.out.println(u.getMeno() + "(" + u.getICO() + ")" + " musi zaplatit DPH: " + ((fyzickaOsoba) u).zaplatDPH() + " Eur");
 				}
 			}
 		}
@@ -449,6 +487,17 @@ public class Controller implements Initializable {
 				new Controller().changeWindow("dpfoA.fxml", new ActionEvent());
 				dic01i.setText(selectedItem.dic01);
 				zaroki.setText(selectedItem.zarok);
+				t36i.setText(selectedItem.t36);
+				t361i.setText(selectedItem.t361);
+				t37i.setText(selectedItem.t37);
+				t371i.setText(selectedItem.t371);
+				t372i.setText(selectedItem.t372);
+				t38i.setText(selectedItem.t38);
+				t39i.setText(selectedItem.t39);
+				t40i.setText(selectedItem.t40);
+				t43i.setText(selectedItem.t43);
+				t70i.setText(selectedItem.t70);
+				t72i.setText(selectedItem.t72);
 			}
 		});
 		
@@ -500,6 +549,17 @@ public class Controller implements Initializable {
 		this.dici = dicprof;
 		this.zaroki = zarok;
 		this.dic01i = dic01;
+		this.t36i = t36;
+		this.t361i = t361;
+		this.t37i = t37;
+		this.t371i = t371;
+		this.t372i = t372;
+		this.t38i = t38;
+		this.t39i = t39;
+		this.t40i = t40;
+		this.t43i = t43;
+		this.t70i = t70;
+		this.t72i = t72;
 		
 		this.platcadphi = platcadphprof;
 		this.odovzdaneTablei = odovzdaneTable;
