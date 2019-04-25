@@ -18,7 +18,7 @@ public class dpfoA extends dp implements Serializable {
 		this.prilohy = prilohy;
 		this.potvrdenie = potvrdenie;
 		
-		System.out.println(this.zarok + " " + this.typ + " " + this.dic01 + " " + this.prilohy + " " + this.potvrdenie);
+		//System.out.println(this.zarok + " " + this.typ + " " + this.dic01 + " " + this.prilohy + " " + this.potvrdenie);
 	}
 
 }
