@@ -10,7 +10,7 @@ public class odovzdaneDP implements Serializable {
 	
 	odovzdaneDP(){
 	}
-	
+
 	public void pridaj(dp d) {
 		this.odovzdane.add(d);
 	}

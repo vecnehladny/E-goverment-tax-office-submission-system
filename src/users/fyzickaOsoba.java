@@ -1,5 +1,9 @@
 package users;
 
+import java.util.ArrayList;
+
+import Controller.Controller;
+import application.dp;
 import application.dpfoA;
 
 public class fyzickaOsoba extends user {
@@ -15,7 +19,8 @@ public class fyzickaOsoba extends user {
 		setICO(ICO);
 		setDIC(DIC);
 		setPlatcaDPH(platcaDPH);
-		pridajDp(new dpfoA(2018,"A",getDIC(),4,true));
+		this.odovzdaneDanove = new odovzdaneDP();
+		this.pridajDp(new dpfoA(2018,"A",this.getDIC(),4,true));
 	}
 
 	@Override
@@ -23,12 +28,30 @@ public class fyzickaOsoba extends user {
 		// TODO Auto-generated method stub
 		return "fyzicka osoba";
 	}
+	
+	@Override
+	public void show() {
+			Controller.profileData(this);
+			System.out.println(this.getMeno() + " " + this.getICO() );
+			System.out.println("|||||"+this.odovzdaneDanove.getOdovzdane()+"||||||");
+	}
 
 	@Override
 	public float zaplatDPH() {
 		
 		if(this.isPlatcaDPH()) {
-			//....
+			ArrayList<dp> odovzdane = this.odovzdaneDanove.getOdovzdane();
+			
+			for(dp d : odovzdane) {
+				if(d instanceof dpfoA) {
+					
+				}
+				else {
+					continue;
+				}
+			}
+			
+			
 		}
 		
 		else {

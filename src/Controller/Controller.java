@@ -18,6 +18,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -61,6 +62,8 @@ public class Controller implements Initializable {
 	private Text llog;
 	
 	private static Text llogi;
+	private Alert dph = new Alert(AlertType.INFORMATION);
+	private TextArea dphVypis = new TextArea();
 	
 //----------------------------------------profile
 
@@ -233,7 +236,7 @@ public class Controller implements Initializable {
 				public void handle(ActionEvent e) {
 					try {
 						changeScene("profile.fxml",e);
-						profileData(result.get(innerI));
+						result.get(innerI).show();
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
@@ -259,19 +262,16 @@ public class Controller implements Initializable {
 		for(int i = 0; i<result.size();i++) {
 			final Integer innerI = new Integer(i);
 			
-			
-			
 			buttons.add(new Button(result.get(innerI).getMeno()+ "\n" +result.get(innerI).getICO()));
 			
-			
 			found.getChildren().add(buttons.get(innerI));
-			
 			
 			buttons.get(innerI).setOnAction(new EventHandler<ActionEvent>() {
 				public void handle(ActionEvent e) {
 					try {
 						changeScene("profile.fxml",e);
-						profileData(result.get(innerI));
+						//polymorfizmus
+						result.get(innerI).show();
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
@@ -289,6 +289,33 @@ public class Controller implements Initializable {
 			changeScene("addUser.fxml", event);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	@FXML
+	public void save(ActionEvent event) throws IOException {
+		try {
+			Database.update();
+		}
+		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@FXML
+	public void vypocitajDPH(ActionEvent event) throws IOException {
+		try {
+			ArrayList<user> subjekti = Database.getSubjekti();
+			
+			for (user u : subjekti) {
+				if(u instanceof fyzickaOsoba) {
+					
+				}
+			}
+		}
+		catch(Exception e) {
+			
 		}
 	}
 	

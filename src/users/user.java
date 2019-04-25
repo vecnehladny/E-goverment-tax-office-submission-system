@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 abstract public class user implements Serializable, platcaDPH {
-	public odovzdaneDP odovzdaneDanove = new odovzdaneDP();
+	public static odovzdaneDP odovzdaneDanove;
 	private String meno;
 	private int vek;
 	private String pohlavie;

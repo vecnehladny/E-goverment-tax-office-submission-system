@@ -163,10 +163,10 @@ public class dp {
 	String podpis886;
 	
 	
-	int rok;
-	String typ;
-	int prilohy;
-	boolean potvrdenie;
+	public int rok;
+	public String typ;
+	public int prilohy;
+	public boolean potvrdenie;
 	
 
 	dp(int rok, String typ, String dic, int prilohy, boolean potvrdenie){
@@ -201,7 +201,8 @@ public class dp {
 	
 
 	public String toString() {
-		return "\nrok: " + this.rok 
+		return "\nrok: " + this.rok
+				+ "\nzarok: " + this.zarok
 				+ "\ntyp: " + this.typ
 				+ "\nprilohy: " + this.prilohy
 				+ "\npotvrdenie: " + this.potvrdenie

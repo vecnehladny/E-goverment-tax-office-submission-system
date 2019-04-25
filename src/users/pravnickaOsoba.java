@@ -1,5 +1,6 @@
 package users;
 
+import Controller.Controller;
 import application.dpfoA;
 
 public class pravnickaOsoba extends user {
@@ -15,7 +16,14 @@ public class pravnickaOsoba extends user {
 		setICO(ICO);
 		setDIC(DIC);
 		setPlatcaDPH(platcaDPH);
+		this.odovzdaneDanove = new odovzdaneDP();
 		pridajDp(new dpfoA(2018,"A",this.getDIC(),4,true));
+	}
+	
+	@Override
+	public void show() {
+			Controller.profileData(this);
+			System.out.println(this.getMeno() + " " + this.getICO() );
 	}
 
 	@Override
