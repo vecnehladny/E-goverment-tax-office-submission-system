@@ -270,7 +270,6 @@ public class Controller implements Initializable {
 				public void handle(ActionEvent e) {
 					try {
 						changeScene("profile.fxml",e);
-						//polymorfizmus
 						result.get(innerI).show();
 					} catch (IOException e1) {
 						e1.printStackTrace();
