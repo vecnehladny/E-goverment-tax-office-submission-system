@@ -347,7 +347,10 @@ public class Controller implements Initializable {
 			
 			for (user u : subjekti) {
 				if(u instanceof fyzickaOsoba) {
-					System.out.println(((fyzickaOsoba) u).DPH());
+					System.out.println("\n+-----------------------------------");
+					System.out.println("| "+u.getMeno() + " ("+u.getICO()+")");
+					System.out.println("| "+((fyzickaOsoba) u).DPH());
+					System.out.println("+-----------------------------------");
 				}
 			}
 		}

@@ -16,7 +16,6 @@ public class platcaDPH implements platenieDPH, Serializable {
 			
 	for(dp d : odovzdane) {
 		if(d instanceof dpfoA) {
-			System.out.println(u.getMeno());
 			return (float) ((Float.parseFloat(d.t40) - Float.parseFloat(d.t43) + Float.parseFloat(d.t37)) * 0.47);
 		}
 		else {
