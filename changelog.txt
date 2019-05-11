@@ -1,0 +1,237 @@
+commit 7b528115ca8ca4a9a58586f44e1e07103a5c76e1
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Sat May 11 19:09:15 2019 +0200
+
+    update diagramu tried
+
+commit e3c3d88c6ab0953e76d2b74b79e2fb2f36f58fd5
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Sat May 11 18:34:27 2019 +0200
+
+    pridany javadoc + upravene readme
+
+commit ce327ad96ae495858c060a5915f441eebb0443ee
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Sat May 11 17:36:14 2019 +0200
+
+    vypocet dph update
+
+commit 30e4311362d0b693061ef5b19289e33556d18a65
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Sat May 11 17:27:27 2019 +0200
+
+    pridanie navrhoveho vzoru Strategy
+
+commit f85da8603ceb41ceb8b966c6be92c09e010d8f98
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Thu Apr 25 13:15:22 2019 +0200
+
+    pridany polymorfizmus na vypocitanie dph pre platcov
+
+commit 6b3dc73e8f4c9ba0b5a4222ec32351ad88b1e369
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Thu Apr 25 12:35:15 2019 +0200
+
+    upravene readme
+
+commit f8afb17c2482ab3a20e686aec948e0734168b2ac
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Thu Apr 25 12:29:04 2019 +0200
+
+    pridany diagram
+
+commit 24e855979ae2c1a01e7964eb87308120c3e030f7
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Thu Apr 25 12:13:09 2019 +0200
+
+    opraveny bug s nevypisovanymim odovzdanych danovych priznani
+
+commit ad5c95e62528539ccdc8663e6f6cb6dade3794a0
+Author: vecnehladny <vecnehladny@vecnehladnys-MacBook-Pro.local>
+Date:   Sun Apr 21 17:46:34 2019 +0200
+
+    opraveny bug s vymazavanim uzivatela
+
+commit c877d64c13fa1bc25ee38fd6efcf4ece2bb29913
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 03:03:05 2019 +0200
+
+    removed submodule
+
+commit 2eb15c30eb90e7e78a4e64c10ceea09edf88e92a
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 02:45:49 2019 +0200
+
+    Revert "Merge remote-tracking branch 'sub/master'"
+    
+    This reverts commit 5e2d610e206e2cb7b280d2f2a5c390e0bc1adbc5, reversing
+    changes made to 7856796877533f408397726fd6ee028c6ef48635.
+
+commit 5e2d610e206e2cb7b280d2f2a5c390e0bc1adbc5
+Merge: 7856796 a18b63d
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 02:44:44 2019 +0200
+
+    Merge remote-tracking branch 'sub/master'
+    
+    Refaktoring
+
+commit 7856796877533f408397726fd6ee028c6ef48635
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 02:38:24 2019 +0200
+
+    refaktoring
+
+commit a18b63d3a4aa8c8cd773e694730f138eb514718d
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 02:27:59 2019 +0200
+
+    refaktoring
+
+commit eb09bc1b4744f02b7a5a9658dac350ffed6b59a0
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 02:05:30 2019 +0200
+
+    serializacia
+
+commit b6ba38a60537a32f79f9675766b8aeb0b8a2fe57
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 02:02:32 2019 +0200
+
+    Refaktoring
+
+commit 2614f5b80b5f234802144bc6ada491163d9c33ce
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 01:19:32 2019 +0200
+
+    Revert "Revert "presunutie repozitara""
+    
+    This reverts commit 273866dd1894b87078aa82c5f1f30a23008aab7e.
+
+commit 273866dd1894b87078aa82c5f1f30a23008aab7e
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 01:10:27 2019 +0200
+
+    Revert "presunutie repozitara"
+    
+    This reverts commit fbb5e568c39474118889b0b360f9642cce8cbbcc.
+
+commit fbb5e568c39474118889b0b360f9642cce8cbbcc
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 01:08:44 2019 +0200
+
+    presunutie repozitara
+
+commit 6230d5035b1f69090823bc570c5bee590bd8df17
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Tue Apr 9 01:01:28 2019 +0200
+
+    pridane pridavanie danovych priznani, vypis v profile uzivatela
+
+commit cddab1685fb33d3bca93ce88d9927af70c10a848
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Mon Apr 8 12:39:15 2019 +0200
+
+    pridane atributy danoveho priznania do classy
+
+commit 1070c39ed0c3b4ddcc02f06bebe44377e05f1c3b
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Mon Apr 8 01:00:52 2019 +0200
+
+    zacate pridavanie atributov danoveho priznania
+
+commit ea79a14442a17d20e4828a14ef6bb291f3995027
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Mon Apr 8 00:46:30 2019 +0200
+
+    pridane fx:id pre cely dokument danoveho priznania, zaciatok handlovania dat z danoveho priznania
+
+commit 37ffd0bf85da2797b6e0a158229df43f39721a35
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 23:21:43 2019 +0200
+
+    pridana 6. strana sceny danoveho priznania + upravene css
+
+commit 12e76bc16e522316639f97419f1e8abf1404748b
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 22:15:38 2019 +0200
+
+    pridana 5. strana sceny danoveho priznania
+
+commit c16b6cf3ea848361c4debcbb283d383717561895
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 19:46:21 2019 +0200
+
+    pridana 4, strana sceny danoveho priznania
+
+commit 7dd6b9a560b53c0fbf8ec862fbcdaaf603b8cfaa
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 19:17:28 2019 +0200
+
+    pridana 3. strana sceny danoveho priznania
+
+commit b5b21d63442b4dee7c480ec0f1be781c0c4eb740
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 18:42:24 2019 +0200
+
+    pridana 2. strana sceny danoveho priznania
+
+commit 1bc5d93ec074533275ec4890d0d4b9d4345aaa4c
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 14:33:02 2019 +0200
+
+    update sceny danoveho priznania + css
+
+commit 605d1fbc1722568399c155bcb17b1e22cf9080c8
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Sun Apr 7 13:18:47 2019 +0200
+
+    pridanie tried danovych priznani, vytvorenie sceny danoveho priznania
+
+commit b0a936886cc23299e00a322f3ea6dc6beb1bfc96
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Fri Apr 5 19:23:38 2019 +0200
+
+    pridana funkcionalita pridania subjekta do databazy
+
+commit 36d21b4171c369581c8b201d0e4e51c1f4bf4b9b
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Fri Apr 5 18:36:58 2019 +0200
+
+    Pridane css, zmeny formulara na pridanie, vytvorenie sablony na danove priznanie typu A FP
+
+commit d9beac0db97bb97a5a960ce089edc2f793e11cb1
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Thu Apr 4 23:15:38 2019 +0200
+
+    pridany formular na pridanie noveho subjekta
+
+commit 51eeccb12d95514bb15079d17ba1ec5712197280
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Thu Apr 4 22:32:02 2019 +0200
+
+    Bugfix: pri navrate z profilu zmizlo meno prihlaseneho uzivatela
+
+commit d8045b67ec7d1867fc5e67d4c34a5e395de1d76c
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Thu Apr 4 21:36:42 2019 +0200
+
+    serializacia - vsetci uzivatelia serializovani
+
+commit 226ed276f8a2cab5264d25f3482ca5e9ea145fbf
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Thu Apr 4 21:34:42 2019 +0200
+
+    serializacia - nacitavanie
+
+commit 241e43f769a796e44de5c8d7916b4f3fa624a017
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Thu Apr 4 21:33:46 2019 +0200
+
+    serializacia - ukladanie
+
+commit d7d717138ec2e5b086c30ac983809caa27ccc79f
+Author: vecnehladny <viktorklima@yahoo.com>
+Date:   Thu Apr 4 21:22:06 2019 +0200
+
+    prvy commit, po prerobi aplikacie do fxml, vytvorene podla navrhu mvc, prihlasovanie, vyhladavanie v databaze, profil uzivatela
