@@ -4,19 +4,33 @@ public class uctovnik extends user {
 	private String username;
 	private String passwd;
 	
+	/**
+	 * Nastavenie prihlasovacich udajov
+	 * @param username
+	 * @param passwd
+	 */
 	public void setLoginData(String username, String passwd) {
 		this.username = username;
 		this.passwd = passwd;
 	}
 	
+	/**
+	 * @return username
+	 */
 	public String getUsername() {
 		return this.username;
 	}
 	
+	/**
+	 * @return password
+	 */
 	public String getPasswd() {
 		return this.passwd;
 	}
 	
+	/**
+	 * nastavenie adminskych prav pre pouzivatela
+	 */
 	public void setAdmin() {
 		this.admin = true;
 	}

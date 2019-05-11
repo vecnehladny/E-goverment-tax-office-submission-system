@@ -27,6 +27,9 @@ abstract public class user implements Serializable {
 	
 	
 	
+	/**
+	 * @return meno
+	 */
 	public String getMeno() {
 		return meno;
 	}
@@ -34,6 +37,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param meno
+	 */
 	public void setMeno(String meno) {
 		this.meno = meno;
 	}
@@ -41,6 +47,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return vek
+	 */
 	public int getVek() {
 		return vek;
 	}
@@ -48,6 +57,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param vek
+	 */
 	public void setVek(int vek) {
 		this.vek = vek;
 	}
@@ -55,6 +67,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return pohlavie
+	 */
 	public String getPohlavie() {
 		return pohlavie;
 	}
@@ -62,6 +77,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param pohlavie
+	 */
 	public void setPohlavie(String pohlavie) {
 		this.pohlavie = pohlavie;
 	}
@@ -69,6 +87,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return adresa
+	 */
 	public String getAdresa() {
 		return adresa;
 	}
@@ -76,6 +97,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param adresa
+	 */
 	public void setAdresa(String adresa) {
 		this.adresa = adresa;
 	}
@@ -83,6 +107,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return mesto
+	 */
 	public String getMesto() {
 		return mesto;
 	}
@@ -90,6 +117,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param mesto
+	 */
 	public void setMesto(String mesto) {
 		this.mesto = mesto;
 	}
@@ -97,6 +127,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return psc
+	 */
 	public String getPSC() {
 		return PSC;
 	}
@@ -104,6 +137,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param pSC
+	 */
 	public void setPSC(String pSC) {
 		PSC = pSC;
 	}
@@ -111,6 +147,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return ICO
+	 */
 	public String getICO() {
 		return ICO;
 	}
@@ -118,6 +157,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param iCO
+	 */
 	public void setICO(String iCO) {
 		ICO = iCO;
 	}
@@ -125,6 +167,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return DIC
+	 */
 	public String getDIC() {
 		return DIC;
 	}
@@ -132,6 +177,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param dIC
+	 */
 	public void setDIC(String dIC) {
 		DIC = dIC;
 	}
@@ -139,6 +187,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @return platcaDane
+	 */
 	public boolean isPlatcaDPH() {
 		return platcaDane;
 	}
@@ -146,6 +197,9 @@ abstract public class user implements Serializable {
 
 
 
+	/**
+	 * @param platcaDPH
+	 */
 	public void setPlatcaDPH(boolean platcaDPH) {
 		if(platcaDPH) {
 			this.platcaDPH = new platcaDPH();
@@ -164,6 +218,9 @@ abstract public class user implements Serializable {
 	user(String meno, int vek, String pohlavie, String adresa, String mesto, String PSC, String ICO, String DIC, boolean platcaDPH){
 	}
 	
+	/**
+	 * Metoda, ktora sa stara o zobrazenie udajov subjekta v jeho profile.
+	 */
 	public void show() {
 		if(this != null) {
 			Controller.profileData(this);
@@ -172,6 +229,10 @@ abstract public class user implements Serializable {
 		
 	}
 	
+	/**
+	 * Metoda, ktora prida danove priznanie do zoznamu odovzdanych daneho subjekta.
+	 * @param d
+	 */
 	public void pridajDp(dp d) {
 		this.odovzdaneDanove.pridaj(d);
 	}
@@ -181,6 +242,9 @@ abstract public class user implements Serializable {
 		
 	}
 	
+	/**
+	 * @return typ objektu
+	 */
 	abstract String identity();
 
 	public String toString() {

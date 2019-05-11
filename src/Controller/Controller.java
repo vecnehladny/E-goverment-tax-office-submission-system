@@ -221,6 +221,13 @@ public class Controller implements Initializable {
 	
 	
 	
+	/**
+	 * Metoda pre prihlasovanie, metoda spracovava udaje z formulara a porovnava s prihlasovacimi udajmi pouzivatela.
+	 * Ak neexistuje zhoda, vypise chybovu hlasku.
+	 * Ak je prihlasenie uspesne, ulozi aktualneho uzivatela do globalnej premennej a aplikacia sa dostane do hlavnej casti.
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void login(ActionEvent event) throws IOException {
 		
@@ -241,6 +248,11 @@ public class Controller implements Initializable {
 		
 	}
 	
+	/**
+	 * Metoda sluziaca na odhlasovanie. Vynuluje globalnu premennu prihlaseneho pouzivatela a prepne aplikaciu do sceny prihlasenia.
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void logout(ActionEvent event) throws IOException {
 		View.LOGGED = null;
@@ -249,6 +261,11 @@ public class Controller implements Initializable {
 		System.out.println("Uspesne odhlaseny");
 	}
 	
+	/**
+	 * Metoda sa stara o vyhladavanie, na zaklade vysledku vyhladavnia vytvori tlacitka, ktore sa preklikavaju najdene profily pouzivatelov
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void search(ActionEvent event) throws IOException {
 		
@@ -283,12 +300,22 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	/**
+	 * Navrat do hlavnej casti aplikacie
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void back(ActionEvent event) throws IOException {
 		changeScene("main.fxml", event);
 	}
 	
 	
+	/**
+	 * Metoda ktora vypise vsetkych subjektov v databaze v podobe tlacidiel preklikavatelnych na ich profily.
+	 * @param event
+	 * @throws IOException
+	 */
 	public void all(ActionEvent event) throws IOException {
 		ArrayList<Button> buttons = new ArrayList<Button>();
 		ArrayList<user> result = Database.getSubjekti();
@@ -319,6 +346,11 @@ public class Controller implements Initializable {
 		
 	}
 	
+	/**
+	 * Metoda pre prepnutie sceny na formular pridania noveho subjektu.
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void add(ActionEvent event) throws IOException {
 		try {
@@ -328,6 +360,11 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	/**
+	 * Ulozenie (Serializovanie) doterajsie vykonanych zmien v databaze.
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void save(ActionEvent event) throws IOException {
 		try {
@@ -340,6 +377,12 @@ public class Controller implements Initializable {
 	}
 	
 	//polymorfizmus
+	/**
+	 * Metoda ktora vypocita kazdej osobe, kolko by mala zaplatit dph za dane obdobie a vypise informacie (meno + ico + ciastku)
+	 * Pri neplaticovi vypise 0.
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void vypocitajDPH(ActionEvent event) throws IOException {
 		try {
@@ -359,6 +402,11 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	/**
+	 * Metoda na handlovanie dat z formulara pre pridanie subjektu
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void addUser(ActionEvent event) throws IOException {
 		/*System.out.println(menoaddi.getText());
@@ -391,6 +439,11 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	/**
+	 * Metoda na vymazanie subjektu z databazy s nutnym potvrdenim.
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	public void deleteUser(ActionEvent event) throws IOException {
 		
@@ -411,6 +464,12 @@ public class Controller implements Initializable {
 	}
 	
 	
+	/**
+	 * Hlavna metoda starajuca sa o vymenu scen v okne podla nazvu sceny.
+	 * @param s
+	 * @param event
+	 * @throws IOException
+	 */
 	public void changeScene(String s,ActionEvent event) throws IOException {
 			
 		Parent homepage = FXMLLoader.load(getClass().getResource("/Resources/"+ s));
@@ -426,12 +485,23 @@ public class Controller implements Initializable {
 		}
 	}
 	
+	/**
+	 * Metoda na zatvorenie aktualneho otvoreneho okna.
+	 * @param event
+	 * @throws IOException
+	 */
 	public void CloseWindow(ActionEvent event) throws IOException {
 		
 		 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		 stage.close();
 	}
 	
+	/**
+	 * Metoda na vytvorenie noveho okna pri vyplneni alebo upravovani danoveho priznania.
+	 * @param s
+	 * @param event
+	 * @throws IOException
+	 */
 	public void changeWindow(String s,ActionEvent event) throws IOException {
 		try {
 			
@@ -448,6 +518,10 @@ public class Controller implements Initializable {
 	    }
 	}
 	
+	/**
+	 * Metoda, ktora sa stara o spracovanie dat subjektu do podoby profilu. Vypis informacii + vypis odovzdanych danovych priznani do tabulky.
+	 * @param u
+	 */
 	public static void profileData(user u) {
 		View.current = u;
 		
@@ -486,6 +560,11 @@ public class Controller implements Initializable {
 				}
 			}
 
+			/**
+			 * Metoda pre otvorenie vybraneho danoveho priznania v novom okne so vsetkymi udajmi.
+			 * @param selectedItem
+			 * @throws IOException
+			 */
 			private void showDP(dp selectedItem) throws IOException {
 				new Controller().changeWindow("dpfoA.fxml", new ActionEvent());
 				dic01i.setText(selectedItem.dic01);
@@ -520,6 +599,11 @@ public class Controller implements Initializable {
 		
 	}
 	
+	/**
+	 * Metoda, ktora poda danove priznanie a ulozi ho ku danovim priznaniam daneho subjektu.
+	 * @param event
+	 * @throws IOException
+	 */
 	public void odovzdat(ActionEvent event) throws IOException {
 		addDP.setContentText("Chcete podať toto Daňové priznanie?");
 		

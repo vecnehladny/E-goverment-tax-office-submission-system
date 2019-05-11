@@ -17,6 +17,11 @@ public class Database implements Serializable {
 	private static ArrayList<user> subjekti = new ArrayList<user>();
 
 	
+	/**
+	 * Metoda sa stara o vyhladavanie v databaze.
+	 * @param key
+	 * @return zoznam subjektov zhodujucich sa s klucom pre vyhladavanie
+	 */
 	public static ArrayList<user> search(String key) {
 		ArrayList<user> found = new ArrayList<user>();
 		
@@ -38,10 +43,16 @@ public class Database implements Serializable {
 		return found;
 	}
 	
+	/**
+	 * @return zoznam subjektov
+	 */
 	public static ArrayList<user> getSubjekti() {
 		return subjekti;
 	}
 	
+	/**
+	 * Ulozenie databazy
+	 */
 	public static void save() {
 		try {
 			FileOutputStream fileOut = new FileOutputStream("databaza.ser");
@@ -62,6 +73,9 @@ public class Database implements Serializable {
 		}
 	}
 	
+	/**
+	 * Nacitanie databazy zo suboru
+	 */
 	public static void load() {
 		subjekti.clear();
 		
@@ -94,21 +108,35 @@ public class Database implements Serializable {
 		
 	}
 	
+	/**
+	 * Update databazy
+	 */
 	public static void update() {
 		save();
 		load();
 	}
 	
+	/**
+	 * Pridanie subjekta do databazy
+	 * @param u
+	 */
 	public static void add(user u) {
 		subjekti.add(u);
 		update();
 	}
 	
+	/**
+	 * Vymazanie subjekta z databazy
+	 * @param current
+	 */
 	public static void vymaz(user current) {
 		subjekti.remove(current);
 		update();
 	}
 	
+	/**
+	 * Testovacie vytvorenie databazy
+	 */
 	public void create() {
 		fyzickaOsoba a = new fyzickaOsoba("Janko", 30, "Muž", "Budatinska 22", "Bratislava", "97901", "13957971", "7096487980", true);
 		fyzickaOsoba b = new fyzickaOsoba("Jozef", 30, "Muž", "Budatinska 23", "Bratislava", "97901", "88662143", "7116725051", true);

@@ -1,14 +1,13 @@
 dedenie - fyzickaOsoba:9
 zapuzdrenie - Controller:44
-agregacia - user:14
+agregacia - user:15
 Rozhranie - platcaDPH
 organizacia kodu - baliky MVC
-navrhovy vzor - MVC
-vynimky - Controller:287
+navrhovy vzor - Strategy
+Default methods - platenieDPH:12
 GUI - View (oddelene)
 Multithreading - View:42
-Generickost - dp / user
+Generickost - fyzickaOsoba:40
 RTTI - fyzickaOsoba:40
 Lambda vyrazy - Controller:459
-Aspektovo orientovane programovanie - ?
 

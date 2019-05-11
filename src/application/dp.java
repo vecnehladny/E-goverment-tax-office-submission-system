@@ -182,18 +182,30 @@ public class dp {
 		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+	 * @return rok
+	 */
 	public int getRok() {
 		return this.rok;
 	}
 	
+	/**
+	 * @return typ
+	 */
 	public String getTyp() {
 		return this.typ;
 	}
 	
+	/**
+	 * @return pocet priloh
+	 */
 	public int getPrilohy(){
 		return this.prilohy;
 	}
 	
+	/**
+	 * @return potvrdenie
+	 */
 	public boolean getPotvrdenie() {
 		return this.potvrdenie;
 		
