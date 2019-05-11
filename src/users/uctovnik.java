@@ -40,11 +40,4 @@ public class uctovnik extends user {
 	String identity() {
 		return "Účtovník";
 	}
-
-	@Override
-	public float zaplatDPH() {
-		
-		
-		return 0;
-	}
 }

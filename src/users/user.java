@@ -10,7 +10,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-abstract public class user implements Serializable, platcaDPH {
+abstract public class user implements Serializable {
+	private platenieDPH platcaDPH;
 	public static odovzdaneDP odovzdaneDanove;
 	private String meno;
 	private int vek;
@@ -20,8 +21,8 @@ abstract public class user implements Serializable, platcaDPH {
 	private String PSC;
 	private String ICO;
 	private String DIC;
-	private boolean platcaDPH; //true = ano, false = nie
 	protected boolean admin = false;
+	private boolean platcaDane;
 	
 	
 	
@@ -139,14 +140,21 @@ abstract public class user implements Serializable, platcaDPH {
 
 
 	public boolean isPlatcaDPH() {
-		return platcaDPH;
+		return platcaDane;
 	}
 
 
 
 
 	public void setPlatcaDPH(boolean platcaDPH) {
-		this.platcaDPH = platcaDPH;
+		if(platcaDPH) {
+			this.platcaDPH = new platcaDPH();
+			this.platcaDane = platcaDPH;
+		}
+		else {
+			this.platcaDPH = new neplatcaDPH();
+			this.platcaDane = platcaDPH;
+		}
 	}
 	
 	user(){
@@ -166,6 +174,11 @@ abstract public class user implements Serializable, platcaDPH {
 	
 	public void pridajDp(dp d) {
 		this.odovzdaneDanove.pridaj(d);
+	}
+	
+	public float DPH() {
+		return this.platcaDPH.zaplatDPH(this);
+		
 	}
 	
 	abstract String identity();

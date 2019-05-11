@@ -347,7 +347,7 @@ public class Controller implements Initializable {
 			
 			for (user u : subjekti) {
 				if(u instanceof fyzickaOsoba) {
-					System.out.println(u.getMeno() + "(" + u.getICO() + ")" + " musi zaplatit DPH: " + ((fyzickaOsoba) u).zaplatDPH() + " Eur");
+					System.out.println(((fyzickaOsoba) u).DPH());
 				}
 			}
 		}

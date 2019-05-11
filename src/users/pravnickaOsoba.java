@@ -31,20 +31,4 @@ public class pravnickaOsoba extends user {
 		// TODO Auto-generated method stub
 		return "pravnicka osoba";
 	}
-
-	@Override
-	public float zaplatDPH() {
-		
-		if(this.isPlatcaDPH()) {
-			//....
-		}
-		
-		else {
-			return 0;
-		}
-		
-		return 0;
-		
-	}
-
 }
